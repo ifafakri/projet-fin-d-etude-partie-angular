@@ -8,7 +8,7 @@
     </div>
     <div  class="titre col-md-4 col-xs-5 col-sm-5  offset-xs-4" data-aos="flip-left">
         La Jeune Chambre Internationale de Sidi Mansour
-        <div class="b" style="margin-top: 50px;"> <a href="" class="btn btn-warning btn-lg">Start Now</a>  <a href="/login" class="btn btn-primary btn-lg">Login</a> <a  *ngIf="logedIn" href="/dashoardAdmin" class="btn btn-primary btn-lg">go to dashboard</a> </div>
+        <div class="b" style="margin-top: 50px;"> <a href="" class="btn btn-warning btn-lg">Start Now</a>  <a *ngIf="!logedIn" href="/login"  class="btn btn-primary btn-lg">Login</a> <a  *ngIf="logedIn" href="/dashoardAdmin" class="btn btn-primary btn-lg">go to dashboard</a> </div>
 
     </div>
 

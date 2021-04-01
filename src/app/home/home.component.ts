@@ -22,6 +22,8 @@ export class HomeComponent implements OnInit {
   logedIn=false
 
   constructor(private Rout:Router,private pserv:PageServiceService) {//statestique annee
+    this.logedIn = localStorage.getItem("logedIn") == "true"
+
    setTimeout(() => {
     setInterval(()=>{
     if(this.anne<=58){

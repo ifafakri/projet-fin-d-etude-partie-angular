@@ -1,26 +1,27 @@
 <div class="contain">
-  <div class="forms-contain­">
-    <div class="signin-signup­">
-      <form name="form" (ngSubmit)="login(f)" #f="ngForm" class="sign-in-form" ­>
-
-        <div>
-          <img src="./assets/­JCIlogo.png" class="imageJCI" alt="" />
-
-        </div>
-
-        <h2 class="title">Sign in</h2>
+  <div class="forms-contain">
+    <div class="signin-signup">
+      <form   
+      name="form" (ngSubmit)="login(f)" #f="ngForm" class="sign-in-form">
+        
+      <div>
+      <img src="./assets/JCIlogo.png" class="imageJCI" alt="" />
+    
+    </div>
+  
+    <h2 class="title">Sign in</h2>
         <div class="input-field">
           <i class="fas fa-user"></i>
-          <input required name="mail" ngModel type="text" placeholder="Usernam­e" />
+          <input required name="mail" ngModel
+          type="text" placeholder="Username" />
         </div>
         <div class="input-field">
           <i class="fas fa-lock"></i>
-          <input matInput placeholder="Passwor­d" name="motpass" ngModel required type="password"
-            placeholder="Passwor­d" />
+          <input matInput  placeholder="Password" name="motpass" ngModel required type="password" placeholder="Password" />
         </div>
         <input type="submit" value="Login" class="btn solid" />
-        <p class="social-text">­Visit our social platforms</p>
-        <div class="social-media" ­>
+        <p class="social-text">Visit our social platforms</p>
+        <div class="social-media">
           <a href="#" class="social-icon">
             <i class="fab fa-facebook-f"></i>
           </a>
@@ -36,25 +37,25 @@
         </div>
       </form>
 
-
+      
     </div>
   </div>
 
-
-  <div class="panels-contai­n">
+  
+  <div class="panels-contain">
     <div class="panel left-panel">
       <div class="content">
         <h3>Welcome</h3>
         <p>
-          The entire team of JCI is thrilled to welcome you on board. We hope you'll do some amazing works here! A warm
-          welcome and lots of good wishes on becoming part of our growing team.
+          The entire team of JCI is thrilled to welcome you on board. We hope you'll do some amazing works here! A warm welcome and lots of good wishes on becoming part of our growing team.
         </p>
-        <button class="btn transparent" id="sign-up-btn" href="/Home">
+        <button  class="btn transparent" id="sign-up-btn" href="/Home">
           Home
         </button>
       </div>
-      <img src="./assets/­log.png" class="image" alt="" />
+      <img src="./assets/log.png" class="image" alt="" />
     </div>
 
   </div>
 </div>
+
