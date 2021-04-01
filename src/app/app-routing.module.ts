@@ -71,6 +71,10 @@ path:'presentation',component:PresentationComponent
 {path:"bureau",component:BureauExecutifComponent}
 ,{
   path:'modifMedia',component:ModifMediaComponent
+},{
+  path:'modifhistoire',component: ModifierHistoriqueComponent
+},{
+  path:'gestionpage',component:GestionPagesComponent
 }
 ]
 ;
