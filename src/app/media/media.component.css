@@ -1,0 +1,55 @@
+
+#titre{
+    color:#F4C613;
+    margin-top: 90px;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   text-align: center;
+   background-repeat: no-repeat;
+   background:url('./../../assets/image/wp.png')
+}
+.row{
+    margin-top: 10vh;
+}
+.media{
+    padding:10px;
+    margin-bottom: 10vh;
+    display: flex;
+}
+.media img{
+
+    height: 90px;
+    width:40%;
+    margin-top: 60px;
+    position: absolute;
+  margin-left: 10%;
+  margin-bottom: 40px;
+  clear: both;
+}
+
+
+
+iframe{
+  float: right;
+    margin-left: 50px;
+    height: 200px;
+    width:80%;
+    margin-top: 40px;
+  
+}
+.text{text-align: center;
+    padding-left: 30%;
+}
+.text span{
+    width: 100%;
+}
+.titre{
+    font-size: 20px;
+    font-weight: bold;
+}
+.description{
+font-size: 17px;
+color:rgb(80, 79, 79);
+}

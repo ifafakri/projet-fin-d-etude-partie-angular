@@ -1,0 +1,32 @@
+.sidenav-container {
+  height: 100%;
+
+}
+
+.sidenav {
+  width: 200px;
+
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+
+}
+.spacer{
+  flex: 1 1 auto;
+}
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+#photo{
+  position: relative;
+  width:50px;
+  height: 60px;
+  border-radius: 50%;
+}
+.ic{position: relative;
+margin-bottom: -20px;
+margin-top: 5px;
+}

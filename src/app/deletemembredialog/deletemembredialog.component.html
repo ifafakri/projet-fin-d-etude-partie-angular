@@ -1,0 +1,18 @@
+<h1 mat-dialog-title></h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="legacy">
+    <button mat-button color="warn">Supprimè Membre </button>
+
+    <span> </span> {{data.mail}} <br></mat-form-field>
+  <mat-form-field appearance="legacy">
+    <button mat-raised-button color="warn" (click)="supprimer(data.mail)"> supprimé </button>
+
+
+
+   
+  </mat-form-field>
+ <div mat-dialog-actions>
+      <button mat-stroked-button color="warn" mat-dialog-close>fermer </button>
+
+</div>
+</div>

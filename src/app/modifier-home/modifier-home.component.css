@@ -1,0 +1,31 @@
+.notrevision{
+    margin-top: 150px;
+    margin-left: 10%;
+    float: left;
+ 
+    padding:7%;
+    }
+    h2{
+        color:white;
+    }
+    #lb1{
+    background-image: url('https://cdn.dribbble.com/users/34020/screenshots/3993396/otp_icon_upload.gif');
+    background-size: cover;
+    padding-top: -30px;
+    
+    height: 250px;
+    width:100%;
+    }
+    #img1,#img2{
+        visibility: hidden;
+    }
+    .credo{float: left;
+        margin-top: 150px;
+    margin-left: 10%;
+ 
+    padding:7%;
+    }
+    textarea{
+        height: 30vh;
+        width: 100%;
+    }

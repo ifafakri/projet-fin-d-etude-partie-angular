@@ -1,0 +1,43 @@
+
+
+<div class="partenaire bg-dark col-lg-5 col-md-5 col-sm-8 col-xs-8">
+    <h2 class="text-info"> Ajouter un partenaire</h2>
+    <form class="form-group" (ngSubmit)="ajouterPartenaire(f1)" #f1="ngForm">
+<input type="file" name="img2" (change)="uploadImage($event)" id="img2">
+        <div class="btn-group">
+        <label  for="img2" class="btn btn-danger"><i class="fa fa-file-image-o" aria-hidden="true"></i>  imorter une image de partenaire </label>  
+     
+    
+    
+      <button type="submit" class="btn btn-primary">Ajouter le nouveau partenaire </button>
+    </div>
+        
+    </form>
+        
+    
+    </div>
+
+
+    <div class="partenaire2 col-lg-5 col-md-5 col-sm-8 col-xs-8">
+        <table class="table">
+            <thead>
+              <tr>
+          
+                <th scope="col">image du partenaire</th>
+                <th scope="col">supprimer le partenaire</th>
+              
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let p of listePartenaire">
+            
+                <td> <img [src]="p.image" class="part"  alt=""> </td>
+                <td> <button class="btn btn-danger" (click)=supprimerImage(p._id)> supprimer</button>  </td>
+          
+              </tr>
+             
+            </tbody>
+          </table>
+            
+        
+        </div>

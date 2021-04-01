@@ -1,0 +1,55 @@
+.container-fluid{
+
+   margin-top:30px;
+   padding-top: 30px;
+   background-color: #F4F4F4;
+   
+}
+
+
+.box{
+position:relative;
+transition-duration: 1s;
+transition-property: background,color;
+ cursor: pointer;
+padding:15px;
+margin-left: 40px;
+background:white;
+font-size: 17px;
+}
+.box .icon{
+    text-align: center;
+    font-size: 70px;
+}
+hr{
+    background-color:#F4C613;
+    width:20%;
+    transition-duration: 1s;
+    transition-property: background,color,border;
+   border:solid 2px #F4C613;
+}
+#titre{
+    color:#F4C613;
+    margin-top: 90px;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   text-align: center;
+   background-repeat: no-repeat;
+   background:url('./../../assets/image/wp.png')
+}
+
+.box:hover {
+    color:white;
+    background:#F4C613;
+}
+.box:hover hr {
+    color:white;
+    background:white;
+    border:solid 2px white;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

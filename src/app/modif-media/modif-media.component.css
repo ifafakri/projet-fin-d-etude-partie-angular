@@ -1,0 +1,13 @@
+#img2{
+    visibility: hidden;
+}
+.ajoutMedia{
+    margin-top: 150px;
+    margin-left: 10%;
+}
+h2{
+    text-align: center;
+}
+img{
+    height:100px;width:100px;
+}

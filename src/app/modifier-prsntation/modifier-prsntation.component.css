@@ -1,0 +1,19 @@
+.presentation-general{
+ float:left;
+        margin-left: 5%;
+        padding:5%;
+        margin-top:150px;
+    }
+    input[type=file]{
+       visibility: hidden;
+    }
+    textarea{
+        width: 100%;
+        height: 30vh;
+    }
+    .mission{float:left;
+        margin-left: 5%;
+        padding:8%;
+        margin-top:150px;
+    
+    }

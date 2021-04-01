@@ -1,0 +1,37 @@
+
+<div class="presentation-general bg-dark">
+    <h2 class="text-success"> pourquoi devenir un membre</h2>
+    <form class="example-form" (ngSubmit)="modifierElm1(f1)" #f1="ngForm"  >
+        <textarea  name="description" [ngModel]="t.adhesion[0].description"> </textarea> <br>
+
+        <button type="submit" class="btn btn-success">modifier</button>
+
+    </form>
+
+
+</div>
+ 
+
+<div class="presentation-general bg-dark">
+    <h2 class="text-success"> comment devenir un membre</h2>
+    <form class="example-form" (ngSubmit)="modifierElm2(f2)" #f2="ngForm" >
+        <textarea placeholder="description"  name="description" [ngModel]="t.adhesion[1].description"> </textarea> <br>
+
+        <button type="submit" class="btn btn-success">modifier</button>
+
+    </form>
+
+
+</div>
+
+<div class="presentation-general bg-dark">
+    <h2 class="text-success"> comment proceder</h2>
+    <form (ngSubmit)="modifierElm3(f3)" #f3="ngForm">
+        <textarea placeholder="description"  name="description" [ngModel]="t.adhesion[2].description"> </textarea> <br>
+
+        <button type="submit" class="btn btn-success">modifier</button>
+
+    </form>
+
+
+</div>

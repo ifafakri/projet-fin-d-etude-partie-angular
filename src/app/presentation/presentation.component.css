@@ -1,0 +1,95 @@
+#titre{
+    color:#F4C613;
+    margin-top: 90px;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   text-align: center;
+   background-repeat: no-repeat;
+   background:url('./../../assets/image/wp.png')
+}
+
+
+.container-fluid{
+padding: 20px;
+    background-color: #F4F4F4;
+}
+.box{
+
+    background:white;
+    font-size: 18px;
+    padding:10px;
+}
+
+
+.box img{
+
+    width: 40%;
+    height:200px;}
+
+
+.box2{cursor: pointer;
+margin-top: 40px;
+    background:white;
+    font-size: 17px;
+padding:10px;
+margin-left: 30px;
+}
+
+.box2:hover{
+
+    background:#F4C613;
+transition-duration: 1s;
+transition-property: background;
+}
+
+
+.box:hover icon{
+color:black;
+margin-top: -5px;
+}
+.box2 h1{
+    color:#F4C613;
+    text-align: center;
+    transition-duration: 1s;
+transition-property: color;
+}
+
+.box2:hover p{
+    color:white;
+}
+
+.box2:hover h1{
+    color:white;
+}
+
+
+.box2 p{
+    color:black;
+    transition-duration: 1s;
+transition-property: color;
+}
+
+.box2 .icon{
+    color:#F4C613;
+    text-align: center;
+    font-size: 25px;
+    transition-duration: 1s;
+transition-property: margin-top,color;
+}
+hr{
+width:20%;
+border:solid 2px #F4C613; 
+transition-duration: 1s;
+transition-property: border;
+}
+.box2:hover hr{
+    border:solid 2px white; 
+
+}
+.img-thumbnail{
+margin-top: 50px;
+
+
+}

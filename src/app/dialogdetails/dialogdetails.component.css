@@ -1,0 +1,21 @@
+img{
+
+    width:150px;
+    height: 90px;
+   float: center;
+   margin-bottom: 50px;
+   border-radius: 50%;
+}
+div{
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span{
+color:rgb(45, 137, 190);
+}
+
+p{color:#7B1FA2;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

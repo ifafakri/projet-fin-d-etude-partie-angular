@@ -1,0 +1,70 @@
+<h1 mat-dialog-title color="wran"></h1>
+<div mat-dialog-content>
+
+    <button mat-button color="basic">Ajout membre</button>
+    <br> <br>
+    <form (ngSubmit)="Ajouter(f)" #f="ngForm" >
+    <mat-form-field appearance="legacy">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" name="mail" required ngModel >
+      <mat-icon matSuffix>mail</mat-icon>
+      <mat-hint>Email</mat-hint>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="legacy">
+        <mat-label>nom</mat-label>
+        <input matInput placeholder="nom" name="nom" required ngModel>
+        <mat-icon matSuffix>person_pin        </mat-icon>
+        <mat-hint>nom</mat-hint>
+    
+      </mat-form-field>
+  <br>
+      <mat-form-field appearance="legacy">
+        <mat-label>prenom</mat-label>
+        <input matInput placeholder="Placeholder" name="prenom" required ngModel>
+        <mat-icon matSuffix>person_pin        </mat-icon>
+        <mat-hint>prenom</mat-hint>
+      </mat-form-field>
+   
+<br>  
+<mat-form-field appearance="legacy">
+  <mat-label>date naissance</mat-label>
+  <input type="date" matInput placeholder="date naissance" name="dnais" required ngModel>
+  <mat-icon matSuffix>date</mat-icon>
+  <mat-hint>date de naissance</mat-hint>
+</mat-form-field>
+<br>
+
+  
+      <mat-form-field appearance="legacy">
+        <mat-label>numero telephone</mat-label>
+        <input matInput placeholder="telephone" name="tel" required ngModel>
+        <mat-icon matSuffix>phone</mat-icon>
+        <mat-hint>numero telephone</mat-hint>
+      </mat-form-field>
+<br>
+
+<mat-form-field appearance="legacy">
+  <mat-label>poste</mat-label>
+  <input type="text" matInput placeholder="poste" name="post" required ngModel>
+  <mat-icon matSuffix>person_pin</mat-icon>
+  <mat-hint>poste</mat-hint>
+</mat-form-field>
+<br>
+
+      <mat-form-field appearance="legacy">
+        <mat-label>Mot de passe</mat-label>
+        <input type="text" matInput placeholder="Placeholder" name="motpass" required ngModel>
+      
+        <mat-hint>mot de passe</mat-hint>
+      </mat-form-field>
+<button mat-raised-button color="warn" type="submit">Ajout Membre</button>
+</form>
+
+</div>
+
+<div mat-dialog-actions>
+  <div class="alert alert-success" *ngIf="message===true">Membre Ajouter ! </div>
+  <button mat-stroked-button color="warn" mat-dialog-close>fermer </button>
+  
+</div>

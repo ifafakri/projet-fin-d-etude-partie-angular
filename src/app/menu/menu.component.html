@@ -1,0 +1,137 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
+<div class="container-fluid" >
+  <div class="row justify-content-md-end">
+<img src="./../../assets/image/logo2.png" class="col-auto mr-auto logo " (click)="getHome()">
+    <div class="col-lg-2 col-md-2 d-none d-md-block d-lg-block" id="m1">
+
+      <div class="categorie"> Qui somme Nous </div>
+    </div>
+    <div class="col-lg-2 col-md-2 d-none d-md-block d-lg-block">
+
+      <div class="categorie" (click)="getAdhesion()" > adhesion a la jci </div>
+    </div>
+
+    <div class="col-lg-2 col-md-2 d-none d-md-block d-lg-block">
+
+      <div class="categorie" id="m2"> partenaires & media </div>
+    </div>
+
+
+    <div class="col-lg-2 col-md-2 d-none d-md-block d-lg-block">
+
+      <div class="categorie" (click)="getContact()"> contact </div>
+    </div>
+
+    <div class="d-block d-sm-none d-xs-none button offset-sm-7 offset-xs-7 bt">
+
+      <div class=""> <button class="btn btn-info"> <i class="fa fa-bars" aria-hidden="true"></i> </button> </div>
+    </div>
+
+
+
+
+
+
+
+
+
+  </div>
+  <div class="row">
+    <div class="menu2 offset-md-4  offset-lg-4">
+      <p (click)="getPresentation()"> Presentation</p>
+      <p (click)="getHistoire()"> Notre Histoire</p>
+      <p (click)="getactivite()"> Nos Activites</p>
+      <p (click)="getBureau()" > Bureau executif</p>
+    </div>
+
+    <div class="menu3 offset-md-5  offset-lg-8">
+      <p (click)="getPartenaire()"> Partenaires</p>
+      <p (click)="getMedia()"> Medias</p>
+
+    </div>
+
+
+
+  </div>
+
+  <div class="row xsm">
+    <p class="close"><i class="fa fa-window-close d-sm-none d-xs-none" aria-hidden="true"></i></p>
+
+    <div class="xsmenu col-xs-12 col-sm-12 d-sm-none d-xs-none" (click)="afficher('a')">
+      <div class="div">
+        Qui somme Nous <span class="i"><i class="fa fa-chevron-down" aria-hidden="true"></i> </span> 
+      </div>
+
+    </div>
+
+    <div class="xsmenu col-xs-12 col-sm-12 d-sm-none d-xs-none esp" *ngIf="a===true">
+      <div class="div" (click)="getPresentation()">
+        Presentation
+      </div>
+
+    </div>
+
+    <div class="xsmenu col-xs-12 offset-sm-1 col-sm-12 d-sm-none d-xs-none esp" *ngIf="a===true">
+      <div class="div" (click)="getHistoire()">
+        Notre Histoire
+      </div>
+
+    </div>
+    <div class="xsmenu col-xs-12 col-sm-12 d-sm-none d-xs-none esp" *ngIf="a===true">
+      <div class="div" (click)="getactivite()">
+        Nos Activites
+      </div>
+
+    </div>
+    <div class="xsmenu col-xs-12 col-sm-12 d-sm-none d-xs-none esp" *ngIf="a===true">
+      <div class="div" (click)="getBureau()">
+        Bureau executif
+
+      </div>
+
+    </div>
+
+   
+
+    <div class="xsmenu  col-xs-12 col-sm-12 d-sm-none d-xs-none">
+      <div class="div"  (click)="getAdhesion()">
+        adhesion a la jci
+      </div>
+
+    </div>
+
+    <div class="xsmenu  col-xs-12 col-sm-12 d-sm-none d-xs-none" (click)="afficher('b')">
+      <div class="div">
+        partenaires & media <span class="i"><i class="fa fa-chevron-down" aria-hidden="true"></i>  </span> 
+      </div>
+      <div class="xsmenu col-xs-12 col-sm-12 d-sm-none d-xs-none esp" *ngIf="b">
+        <div class="div" (click)="getPartenaire()">
+          Partenaires
+        </div>
+  
+        <div class="xsmenu col-xs-12 col-sm-12 d-sm-none d-xs-none esp" *ngIf="b">
+          <div class="div" (click)="getMedia()">
+           Media
+          </div>
+    
+        </div>
+      </div>
+
+
+    </div>
+    <div class="xsmenu  col-xs-12 col-sm-12 d-sm-none d-xs-none">
+      <div class="div" (click)="getContact()" >
+       contact
+      </div>
+
+    </div>
+
+    
+
+
+
+  </div>
+
+
+</div>

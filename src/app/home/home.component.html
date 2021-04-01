@@ -1,0 +1,139 @@
+<div class="box1">
+    <div class="video col-lg-12 col-md-12 col-sm-12 ">
+        <video src="./../../assets/video/158025307_418196966143392_4048388125837121276_n.mp4" autoplay loop></video>
+
+
+
+
+    </div>
+    <div  class="titre col-md-4 col-xs-5 col-sm-5  offset-xs-4" data-aos="flip-left">
+        La Jeune Chambre Internationale de Sidi Mansour
+        <div class="b" style="margin-top: 50px;"> <a href="" class="btn btn-warning btn-lg">Start Now</a>  <a href="/login" class="btn btn-primary btn-lg">Login</a> <a  *ngIf="logedIn" href="/dashoardAdmin" class="btn btn-primary btn-lg">go to dashboard</a> </div>
+
+    </div>
+
+
+
+
+</div>
+
+<div class="social-media">
+    <a href="" ><img src="./../../assets/image/facebook.png" alt=""> </a>
+    <a href="" ><img src="./../../assets/image/twitter.png" alt=""> </a>
+    <a href="" ><img src="./../../assets/image/youtube.png" alt=""> </a>
+    <a href="" ><img src="./../../assets/image/linkedin.png" alt=""> </a>
+    <a href="" ><img src="./../../assets/image/instagram.png" alt=""> </a>
+
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+
+
+
+        <div class="box media col-lg-12 col-md-12 col-xs-6 col-sm-6" data-aos="zoom-in-down">
+
+            <img [src]="home.home[0].image"
+                class="img-fluid rounded col-lg-5 col-md-5 col-sm-5 col-xs-5">
+            <div class="visionText col-lg-7 col-md-7 col-sm-5 col-xs-5 media-body">
+                <h3 style="text-align: center;"> <i class="fa fa-pie-chart" aria-hidden="true"></i> Notre Vision </h3>
+                <p>
+                    {{home.home[0].description}}
+
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="statestique">
+
+
+
+            <div class="row">
+
+
+                <!--Annee-->
+                <div class="annee col-lg-3 col-md-3 offset-1 " data-aos="zoom-in-left">
+                    <p> <i class="fa fa-clock-o" aria-hidden="true"></i></p>
+
+                    <p class="textstatestique"> {{anne}}</p>
+                    <p class="textstatestique"> annee</p>
+
+                </div>
+                <!--Action-->
+                <div class="annee col-lg-3 col-md-3 offset-1 " data-aos="zoom-out-up">
+                    <p> <i class="fa fa-clock-o" aria-hidden="true"></i></p>
+
+                    <p class="textstatestique"> {{action}}</p>
+                    <p class="textstatestique"> Action</p>
+
+                </div>
+
+                <!--Formations -->
+
+                <div class="annee col-lg-3 col-md-3 offset-1 " data-aos="zoom-out-up">
+                    <p> <i class="fa fa-clock-o" aria-hidden="true"></i></p>
+
+                    <p class="textstatestique">{{formation}} </p>
+                    <p class="textstatestique"> Formation</p>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="credo media col-lg-10 col-md-10 col-sm-12 col-xs-12" data-aos="zoom-out-right">
+
+            <img [src]="home.home[1].image" class="rounded mr-3 " alt="">
+
+
+            <div class="credotext media-body ">
+                <h2> Notre Credos</h2>
+<!--
+                <h3><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Que la foi en Dieu donne à la vie son véritable
+                    sens ; </h3>
+                <h3><i class="fa fa-users" aria-hidden="true"></i> Que la fraternité humaine transcende la souveraineté
+                    des nations ;</h3>
+                <h3><i class="fa fa-shopping-bag" aria-hidden="true"></i> Que la liberté des individus et de
+                    l’entreprise assure mieux la justice économique ;
+
+                </h3>
+
+                <h3><i class="fa fa-address-card" aria-hidden="true"></i> Que l’autorité doit s’appuyer sur la loi et
+                    non sur l’arbitraire ;
+                </h3>
+                <h3> <i class="fa fa-industry" aria-hidden="true"></i> Que la personne humaine est la plus précieuse des
+                    richesses ;
+                </h3>
+
+                <h3> <i class="fa fa-certificate" aria-hidden="true"></i> Et que servir l’humanité constitue l’oeuvre la
+                    plus noble d’une vie.</h3>-->
+                    {{home.home[1].description}}
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+</div>
+
+
+<app-contact> </app-contact>
+
+<div class="row">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104889.14766467811!2d10.797902983372184!3d34.76098662638827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13002cda1486c695%3A0x22dfe0a62c50ce6f!2z2LXZgdin2YLYs-KAjg!5e0!3m2!1sar!2stn!4v1613998703066!5m2!1sar!2stn" width="600" height="450" style="border:0;" class="col-lg-6 col-md-6 col-sm-8 col-xs-8 offset-lg-2 offset-md-2" allowfullscreen="" loading="lazy" data-aos="zoom-out-down">
+
+    </iframe>
+</div>
+<!-- Large modal -->
