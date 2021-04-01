@@ -55,10 +55,11 @@ async uploadimage2(event){
  await this.convertto64(this.f2).toPromise().then(
    (data:string)=>{
     this.imagedata2=data
+   
    }
   
  )
-  
+
    }
 
 
@@ -97,7 +98,7 @@ modifierpartie1(f:NgForm){
     modifierpartie2(f:NgForm){
       this.obj2={description:f.value.description,image:this.imagedata2}
       this.pserv.modifierHistoriquePartie2(this.obj2).subscribe()
-      
+      console.log(this.imagedata2)
       
         }
 
