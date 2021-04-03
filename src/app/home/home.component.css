@@ -50,18 +50,18 @@ margin: auto;
 }
 .box{
   
-
+    display: flexbox;
     margin-left: 10px;
   
-   width: 100%;
+  
  background: #bdbdbd4d;
    border-radius: 5px;
    z-index: -10;
-  
 
    margin-top: 50px;
    margin-bottom: 50px;
    color:#757575;
+
 }
 
 .box h3{
@@ -71,14 +71,17 @@ margin: auto;
     font-size: 20px;
     margin-left:10px;
     margin-top: 15px;
+    position: relative;
 }
 h3 i{
     color:#F4C613;
  font-size: 30px;
 }
 .box .visionText{
-    
+    position: relative;
     font-size: 17px;
+    display: block;
+ 
 }
 .box:hover{
   
