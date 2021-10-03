@@ -38,19 +38,27 @@
   
       <mat-form-field appearance="legacy">
         <mat-label>numero telephone</mat-label>
-        <input matInput placeholder="telephone" name="tel" required ngModel>
+        <input matInput placeholder="telephone" name="numtel" required ngModel>
         <mat-icon matSuffix>phone</mat-icon>
         <mat-hint>numero telephone</mat-hint>
       </mat-form-field>
 <br>
 
-<mat-form-field appearance="legacy">
+
   <mat-label>poste</mat-label>
-  <input type="text" matInput placeholder="poste" name="post" required ngModel>
-  <mat-icon matSuffix>person_pin</mat-icon>
-  <mat-hint>poste</mat-hint>
-</mat-form-field>
+  <select placeholder="poste" name="post"  ngModel>
+
+    <option *ngFor="let p of post" [value]="p.nomPoste" > {{p.nomPoste}} </option>
+
+</select>
+
+
+
 <br>
+
+<input type="file" name="" class="form-control" (change)="upload($event)">
+
+
 
       <mat-form-field appearance="legacy">
         <mat-label>Mot de passe</mat-label>

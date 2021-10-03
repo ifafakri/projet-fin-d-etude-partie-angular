@@ -1,15 +1,27 @@
 .contact {
     
-    position: relative;
-    margin-top: 100px;
-    height:80vh;
+
+   
     background: url('./../../assets/image/contact.png');
+    padding-top:110px;
+    clear:both;
+    margin-bottom: 50px;
   }
   
+
+.section{
+  margin-bottom: 50px;
+clear:both;
+
+
+}
+
+
+
   .contact:before {
     content: "";
     background: rgba(255, 255, 255, 0.7);
-    position: absolute;
+   clear:both;
     bottom: 0;
     top: 0;
     left: 0;
@@ -156,12 +168,15 @@
   }
 
   .socialMed{
-    height:90px;
-width: 15%;
+    
+    height:50px;
+width: 50px;
 margin-left: 5%;
+
   }
   .smidea{
 align-items: center;
 padding:0px;
     margin-bottom: 100px;
+  text-align: center;
   }

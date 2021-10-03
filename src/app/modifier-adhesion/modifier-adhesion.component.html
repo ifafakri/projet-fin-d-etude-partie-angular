@@ -1,10 +1,14 @@
+<div class="container">
 
-<div class="presentation-general bg-dark">
-    <h2 class="text-success"> pourquoi devenir un membre</h2>
+    <div class="row">
+        
+<div class="card presentation-general bg-light">
+    <h2 class="text-primary"> {{t.adhesion[0].titre}} </h2>
     <form class="example-form" (ngSubmit)="modifierElm1(f1)" #f1="ngForm"  >
-        <textarea  name="description" [ngModel]="t.adhesion[0].description"> </textarea> <br>
+        <input type="text" name="titre" class="form-control" [ngModel]="t.adhesion[0].titre" id="">
+        <textarea  name="description" class="form-control" [ngModel]="t.adhesion[0].description"> </textarea> <br>
 
-        <button type="submit" class="btn btn-success">modifier</button>
+        <button type="submit" class="btn btn-primary">modifier</button>
 
     </form>
 
@@ -12,26 +16,30 @@
 </div>
  
 
-<div class="presentation-general bg-dark">
-    <h2 class="text-success"> comment devenir un membre</h2>
+<div class="card presentation-general bg-light">
+    <h2 class="text-primary"> {{t.adhesion[1].titre}}  </h2>
     <form class="example-form" (ngSubmit)="modifierElm2(f2)" #f2="ngForm" >
-        <textarea placeholder="description"  name="description" [ngModel]="t.adhesion[1].description"> </textarea> <br>
+        <input type="text" name="titre" class="form-control" [ngModel]="t.adhesion[1].titre" id="">
+        <textarea placeholder="description" class="form-control"  name="description" [ngModel]="t.adhesion[1].description"> </textarea> <br>
 
-        <button type="submit" class="btn btn-success">modifier</button>
+        <button type="submit" class="btn btn-primary">modifier</button>
 
     </form>
 
 
 </div>
 
-<div class="presentation-general bg-dark">
-    <h2 class="text-success"> comment proceder</h2>
+<div class="card presentation-general bg-light">
+    <h2 class="text-primary"> {{t.adhesion[2].titre}}</h2>
     <form (ngSubmit)="modifierElm3(f3)" #f3="ngForm">
-        <textarea placeholder="description"  name="description" [ngModel]="t.adhesion[2].description"> </textarea> <br>
+        <input type="text" name="titre" class="form-control" [ngModel]="t.adhesion[2].titre" id="">
+        <textarea placeholder="description"  class="form-control" name="description" [ngModel]="t.adhesion[2].description"> </textarea> <br>
 
-        <button type="submit" class="btn btn-success">modifier</button>
+        <button type="submit" class="btn btn-primary">modifier</button>
 
     </form>
 
 
+</div>
+    </div>
 </div>

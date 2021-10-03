@@ -1,0 +1,148 @@
+<div class="accee">
+
+    <!--Formation-->
+    <div class="jumbotron">
+        <h1 class="display-4">formation</h1>
+     
+        <form   class="form-group" (ngSubmit)="Aformation(f1)" #f1="ngForm" >
+            <div class="form-inline">
+                    <label class="mx-sm-3 mb-2"> Ajout</label> <input type="checkbox" name="ajout"  [ngModel]="a.formation.ajout">
+            <label class="mx-sm-3 mb-2"> modifier</label> <input type="checkbox" name="modufication" [ngModel]="a.formation.modufication">
+            <label class="mx-sm-3 mb-2"> supprimer</label> <input type="checkbox" name="suppression" [ngModel]="a.formation.suppression">
+
+             
+            </div>
+       <button type="submit" class="btn btn-primary btn-lg mx-sm-3 mt-2">Modifier l Acceè</button>
+        </form>
+        
+
+
+      </div>
+
+<!--fin-->
+
+
+ <!--Formation-->
+ <div class="jumbotron">
+    <h1 class="display-4">projet</h1>
+ 
+    <form   class="form-group" (ngSubmit)="Aprojet(f2)" #f2="ngForm"  >
+        <div class="form-inline">
+                <label class="mx-sm-3 mb-2"> Ajout</label> <input type="checkbox" name="ajout" [ngModel]="a.projet.ajout">
+        <label class="mx-sm-3 mb-2"> modifier</label> <input type="checkbox" name="modufication" [ngModel]="a.projet.modufication">
+        <label class="mx-sm-3 mb-2"> supprimer</label> <input type="checkbox" name="suppression" [ngModel]="a.projet.suppression">
+
+         
+        </div>
+   <button type="submit" class="btn btn-primary btn-lg mx-sm-3 mt-2">Modifier l Acceè</button>
+    </form>
+    
+
+
+  </div>
+
+<!--fin-->
+
+ <!--membre-->
+ <div class="jumbotron">
+    <h1 class="display-4">membre</h1>
+ 
+    <form   class="form-group" (ngSubmit)="AMembre(f3)" #f3="ngForm"   >
+        <div class="form-inline">
+                <label class="mx-sm-3 mb-2"> Ajout</label> <input type="checkbox" name="ajout" [ngModel]="a.membre.ajout">
+        <label class="mx-sm-3 mb-2"> modifier</label> <input type="checkbox" name="modufication" [ngModel]="a.membre.modufication">
+        <label class="mx-sm-3 mb-2"> supprimer</label> <input type="checkbox" name="suppression" [ngModel]="a.membre.suppression">
+
+         
+        </div>
+   <button type="submit" class="btn btn-primary btn-lg mx-sm-3 mt-2">Modifier l Acceè</button>
+    </form>
+    
+
+
+  </div>
+
+<!--fin-->
+<!--page-->
+<div class="jumbotron">
+    <h1 class="display-4">page</h1>
+ 
+    <form   class="form-group" (ngSubmit)="Apage(f4)"  #f4="ngForm"  >
+        <div class="form-inline">
+              
+        <label class="mx-sm-3 mb-2"> modifier</label> <input type="checkbox" name="modufication" [ngModel]="a.page.modufication">
+   
+
+         
+        </div>
+   <button type="submit" class="btn btn-primary btn-lg mx-sm-3 mt-2">Modifier l Acceè</button>
+    </form>
+    
+
+
+  </div>
+
+<!--fin-->
+
+<!--page-->
+<div class="jumbotron">
+    <h1 class="display-4">Recrutement</h1>
+ 
+    <form   class="form-group"  (ngSubmit)="Arecrutement(f5)" #f5="ngForm" >
+        <div class="form-inline">
+              
+        <label class="mx-sm-3 mb-2"> affichier la liste de recrutement</label> <input type="checkbox" name="modufication" [ngModel]="a.recrutement.affichage">
+   
+
+         
+        </div>
+   <button type="submit" class="btn btn-primary btn-lg mx-sm-3 mt-2">Modifier l Acceè</button>
+    </form>
+    
+
+
+  </div>
+
+<!--fin-->
+<!--page-->
+<div class="jumbotron">
+    <h1 class="display-4">Historique</h1>
+ 
+    <form   class="form-group" (ngSubmit)="AHistorique(f6)"  #f6="ngForm" >
+        <div class="form-inline">
+              
+        <label class="mx-sm-3 mb-2"> affichier l historique</label> <input type="checkbox" name="modufication" [ngModel]="a.historique.affichage">
+   
+
+         
+        </div>
+   <button type="submit" class="btn btn-primary btn-lg mx-sm-3 mt-2">Modifier l Acceè</button>
+    </form>
+    
+
+
+  </div>
+
+<!--fin-->
+
+ <!--Formation-->
+ <div class="jumbotron">
+    <h1 class="display-4">contact</h1>
+ 
+    <form   class="form-group" (ngSubmit)="Acontact(f7)"   #f7="ngForm">
+        <div class="form-inline">
+             
+        <label class="mx-sm-3 mb-2"> affichier liste des contacts</label> <input type="checkbox" name="modufication" [ngModel]="a.contact.affichage">
+        
+         
+        </div>
+   <button type="submit" class="btn btn-primary btn-lg mx-sm-3 mt-2">Modifier l Acceè</button>
+    </form>
+    
+
+
+  </div>
+
+<!--fin-->
+
+</div>

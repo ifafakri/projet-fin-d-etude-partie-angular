@@ -1,0 +1,83 @@
+<div class="com">
+
+
+    
+  
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+  
+    <!-- Name Column -->
+    <button mat-raised-button color="warn" (click)="affichet('formation')"  > formation </button> 
+    <button mat-raised-button color="warn" (click)="affichet('projet')"  > projet </button> 
+    
+<!--  Tableaux de formation  -->
+<h2  *ngIf="!aff" > les commantaires du formations </h2>
+
+
+<table mat-table [dataSource]="dataSource2" class="mat-elevation-z8"  style="float:left;width:40%;"   *ngIf="!aff" >
+  
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="titre">
+      <th mat-header-cell *matHeaderCellDef> titre </th>
+      <td mat-cell *matCellDef="let element"> {{element.titre}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+   
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="les_commantaires">
+      <th mat-header-cell *matHeaderCellDef> les_commantaires </th>
+      <td mat-cell *matCellDef="let element"> <a [href]="url+element.id"   mat-raised-button color="accent" >affiche </a>   </td>
+    </ng-container>
+  
+    
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+  </table>
+
+  <!-- tableaux proget-->
+  
+
+
+
+  <h2 *ngIf="aff"> les commantaires du proget  </h2>
+<table mat-table [dataSource]="dataSource3" class="mat-elevation-z8"  style="float:left;width:40%;display:block;" *ngIf="aff" >
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="titre">
+      <th mat-header-cell *matHeaderCellDef> titre </th>
+      <td mat-cell *matCellDef="let element"> {{element.titre}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+  
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="les_commantaires">
+      <th mat-header-cell *matHeaderCellDef> les_commantaires </th>
+      <td mat-cell *matCellDef="let element"> <a [href]="url+element.id"   mat-raised-button color="accent" >affiche </a>   </td>
+    </ng-container>
+  
+    
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns3"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns3;"></tr>
+  </table>
+  
+  
+  
+  
+  
+
+  
+  
+</div>

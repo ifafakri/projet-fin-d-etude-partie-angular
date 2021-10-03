@@ -1,26 +1,107 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar><mat-icon>home_work    </mat-icon> Dashboard Admin</mat-toolbar>
-    <mat-toolbar><a mat-raised-button color="primary" > nom&prenom</a> </mat-toolbar>
+<mat-sidenav-container class="sidenav-container mat-drawer-inner-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+   
+   
+   
+    <mat-toolbar>
+      
+    <button type="button" class="mn" mat-raised-button (click)="drawer.toggle()">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+
+     </button>
+      <img src="./../../assets/JCIlogo.png" class="logo"> </mat-toolbar>
+    <mat-divider></mat-divider>
+
     <mat-nav-list>
-      <a mat-list-item href="/gestionMembre"><mat-icon>supervisor_account </mat-icon> Membres</a>
-      <a mat-list-item href="/page"><mat-icon>view_quilt </mat-icon> Pages</a>
-      <a mat-list-item href="#"><mat-icon>account_balance </mat-icon> Formations </a>
-      <a mat-list-item href="#"><mat-icon>leaderboard      </mat-icon> evenement </a>
+      <mat-toolbar class="im1"> <img [src]="m.image" class="profile"> </mat-toolbar>
       <mat-toolbar>
-      <a mat-raised-button color="primary" href="" (click)="disconnect()"> <mat-icon>logout</mat-icon> Deconnection </a>
-    </mat-toolbar>
+        <h2>{{m.nom}} {{m.prenom}}</h2>
+      </mat-toolbar>
+<mat-toolbar class="pfile" >
+  <a mat-list-item href="/profile">
+    profile <mat-icon> psychology </mat-icon>
+ </a>
+</mat-toolbar>
+
+      <mat-toolbar>
+        <h3>{{m.poste}} </h3>
+      </mat-toolbar>
+    </mat-nav-list>
+    <mat-nav-list class="m2">
+   
+    <p class="titre">gestion les membres</p>
+    <a mat-list-item href="/gestionMembre" style=" margin-left:10%;" *ngIf="acce.membre.ajout || acce.membre.modufication || acce.membre.suppression || m.poste=='president'">
+      <mat-icon>supervisor_account </mat-icon> Membres   <a mat-raised-button color="warn"class="but"  >{{mbr}} </a> 
+    </a>
+    <a mat-list-item href="/bureaux" style=" margin-left:10%;" >
+      <mat-icon>supervisor_account </mat-icon> Bureaux   
+    </a>
+      <a mat-list-item href="/accee" style=" margin-left:10%;" *ngIf="m.poste=='president'">
+        <mat-icon>leaderboard </mat-icon> Accès
+      </a>
+    <p class="titre"> Gestion des Actions </p>
+     
+      <a mat-list-item href="/modifformation" style=" margin-left:10%;"
+        *ngIf="acce.formation.ajout || acce.formation.modufication || acce.formation.suppression || m.poste=='president'">
+        <mat-icon>account_balance </mat-icon>Formations
+      </a>
+      <a mat-list-item href="/projet" style=" margin-left:10%;"
+        *ngIf="acce.projet.ajout || acce.projet.modufication || acce.projet.suppression || m.poste=='president'">
+        <mat-icon>assignment </mat-icon>Projets
+      </a>
+
+      <a mat-list-item href="/gestionCommantaire" style=" margin-left:10%;"
+        *ngIf="acce.projet.ajout || acce.projet.modufication || acce.projet.suppression || m.poste=='president' || acce.formation.ajout || acce.formation.modufication || acce.formation.suppression">
+        <mat-icon>assignment </mat-icon>Commentaires
+      </a>
+      
+      <a mat-list-item href="/listeInscrir" style=" margin-left:10%;"
+        *ngIf=" m.poste=='president' || acce.formation.ajout || acce.formation.modufication || acce.formation.suppression">
+        <mat-icon>assignment </mat-icon>Demandes d ' inscriptions
+      </a>
+
+
+
+
+
+      <p class="titre"> Gestion de site </p>
+ <a mat-list-item href="/page"  style=" margin-left:10%;" *ngIf="acce.page.modufication || m.poste=='president'">
+        <mat-icon>view_quilt </mat-icon>  Pages
+      </a>
+
+      <p class="titre">Gestion de Recrutement </p>
+  
+         <a mat-list-item href="/config" style=" margin-left:10%;" *ngIf=" m.poste=='president'">
+        <mat-icon>settings </mat-icon> Paramètres ‏
+      </a>
+
+      <p class="titre">Gestion d ` historique </p>
+      <a mat-list-item href="/historiqueU" style=" margin-left:10%;">
+        <mat-icon>explore </mat-icon>  Historique
+      </a>
+      <p class="titre">Gestion de contact </p>
+      <a mat-list-item href="/listeContact" style=" margin-left:10%;" *ngIf="acce.contact.affichage || m.poste=='president'">
+        <mat-icon>mail </mat-icon>  Contact
+      </a>
+   
+    
+      <mat-toolbar>
+        <a mat-raised-button color="primary" href="" (click)="disconnect()">
+          <mat-icon>logout</mat-icon> Deconnection
+        </a>
+      </mat-toolbar>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-   
-    <ng-content> 
 
-     
-    </ng-content>
-   
+    <button type="button" class="mn" mat-raised-button (click)="drawer.toggle()">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+
+     </button>
+
   </mat-sidenav-content>
+    <ng-content>
+  
+    </ng-content>
 </mat-sidenav-container>

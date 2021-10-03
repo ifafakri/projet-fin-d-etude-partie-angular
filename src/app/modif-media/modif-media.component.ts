@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import{NgForm} from '@angular/forms';
+
 import { Observable, Subscriber } from 'rxjs';
 import{PageServiceService} from './../pages-service/page-service.service';
+import{LoginserviceService} from './../loginservice/loginservice.service';
+import{AcceeServiceService} from './../accee/accee-service.service';
 interface media{
 
   image:string,
@@ -10,7 +13,7 @@ interface media{
   titre:string
 }
 interface media2{
-  _id:number,
+  id:number,
   image:string,
   video:string,
   description:string,
@@ -19,6 +22,24 @@ interface media2{
 interface obd{
   id:number
 }
+export interface PeriodicElement {
+  _id:number
+  nom: string;
+
+  prenom: string;
+
+  dnais:string;
+  numtel:string;
+  mail:string;
+  poste:string;
+  dateposte:string;
+  motpass:string;
+
+
+
+}
+
+
 @Component({
   selector: 'app-modif-media',
   templateUrl: './modif-media.component.html',
@@ -35,12 +56,31 @@ export class ModifMediaComponent implements OnInit {
   imageData2:string
   modifId:number
   o:obd
-  constructor(private pserv:PageServiceService) { }
+  m:PeriodicElement
+  dat : string = new Date().toDateString();
 
-  ngOnInit(): void {
+  constructor(private pserv:PageServiceService,private logsrv:LoginserviceService,private acsrv:AcceeServiceService) { }
+
+  async ngOnInit() {
     this.pserv.GetMedia().subscribe(data =>{
-      this.listeMedia=data 
+      this.listeMedia=data
+      
     })
+
+    var token=localStorage.getItem('token')
+ 
+
+    let email=await this.logsrv.isConnect({t:token})
+  console.log(email)
+  
+    this.logsrv.getMembre(email).toPromise().then(
+      (data:PeriodicElement)=>{
+    this.m=data
+    
+    
+      }
+    )
+
   }
   async uploadImage(event){
     this.f=event.target.files[0]
@@ -93,6 +133,8 @@ console.log(f1.value )
 this.obj={image:this.imageData,video:f1.value.video,titre:f1.value.titre,description:f1.value.description}
 this.pserv.ajoutMedia(this.obj).subscribe()
 
+this.acsrv.AjoutHistoriqUser({nom:this.m.nom,prenom:this.m.prenom,action:'a',description:'ajout media ('+f1.value.titre+')',date:this.dat}).subscribe()
+
 }
 
 changeId(val){
@@ -104,14 +146,17 @@ this.modifId=val
 modifierMedia(f:NgForm){
 console.log(f.value)
 this.pserv.ModifierMedia({id:f.value.id,titre:f.value.titre,description:f.value.description,image:this.imageData2,video:f.value.video}).subscribe()
+this.acsrv.AjoutHistoriqUser({nom:this.m.nom,prenom:this.m.prenom,action:'m',description:'modifier media ('+f.value.titre+')',date:this.dat}).subscribe()
 
 
 }
 
-supprimerMedia(val){
+supprimerMedia(val,titre){
 
 
 this.pserv.suppressionMedia(val).subscribe()
+this.acsrv.AjoutHistoriqUser({nom:this.m.nom,prenom:this.m.prenom,action:'s',description:'supprimer  media titre: ('+titre+')',date:this.dat}).subscribe()
+
 }
 
 }

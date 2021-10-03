@@ -1,98 +1,41 @@
-.justify-content-md-end{
+.navbar{
+    z-index:1000;
     position: fixed;
-    z-index: 100;
     width: 100%;
-    font-size: 1rem;
-    background:rgba(0, 0, 0, 0.616);
-    color:aliceblue;
- transition-duration: 1s;
- transition-property: padding,color,background;
+    background:white;
+}
+.logo{
+    height:60px;
+    width:120px;
+   
+
 }
 
-
-
-.categorie{
-    padding: 20px;
-    cursor: pointer;
-    
+ul>li>a{
+    color:#2399D5;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Cairo', sans-serif;
+ 
 }
-i{color:aliceblue;}
 
-.containerscroll{
+ul>li>a:hover{
+    color:#F58949;
 
-    background:aliceblue;
-    color:black;
-    padding:15px;
-    
+
 
 }
-.menu2{
-    position: fixed;
-      margin-top: 4%;
-        z-index: 100;
-        background:white;
-        color:black;
-    text-align: center;
-        padding: 30px;
-        border-radius: 5px;
-    visibility: hidden;
-    cursor: pointer;
-    
-    }
-    .menu3{
-        position: fixed;
-          margin-top: 4%;
-            z-index: 5;
-            font-size: 17px;
-            background:white;
-            color:black;
-        text-align: center;
-            padding: 50px;
-            border-radius: 5px;
-        z-index: 100;
-        cursor: pointer;
-        visibility: hidden;
-        }
+ul{
+   
+    margin-top: 1%;
+   
+   
 
-        .marg{
+}
+li{
+   
+}
 
-            margin-top:5%;
-        }
-
-        .xsmenu{
-            margin-top: 10px;
-            font-size: 14px;
-            cursor: pointer;
-            
-        }
-        .xsm{
- visibility: hidden;
-            position:absolute;
-            background-color: aliceblue;
-            color:black;
-          position: fixed;          z-index: 150;
-
-
-        }
-       p i{margin-left: 20px;
-        cursor: pointer;
-            color:black;
-        }
-        .i i{
-            color:black;
-        }
-        .esp{
-            margin-left: 10%;
-        }
-        .logo{
-            max-width: 150px;
-            height: 90px;
-        
-            }
-
-
-            .bt{
-                
-                margin-left: 90%;
-                margin-top: -5%;
-            }
+.collapse{
+ margin-left: 15%;
+}

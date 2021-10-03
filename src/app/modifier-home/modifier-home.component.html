@@ -1,29 +1,71 @@
-<div class="notrevision bg-dark col-lg-4 col-md-5 col-sm-8 col-xs-8" >
-    <h2 class="text-success">modifier  vision </h2>
-    <form (ngSubmit)="modifierVision(f1)" #f1="ngForm" >
-     
-      <textarea placeholder="description" name="description" class="" [ngModel]="t.home[0].description"> </textarea><br>
-          
-          
-      <label for="img1" class="btn btn-danger"><i class="fa fa-file-image-o" aria-hidden="true"></i>        modifier l image </label>   <input  type="file" id="img1" name="image" (change)="uploadImage($event)" >
-        <br>
-
-        <button type="submit" class="btn btn-success btn-lg">Modifier</button>
-    </form>
-</div>
+<div class="container">
+    <div class="row">
+        <div class="card notrevision bg-light col-lg-4 col-md-5 col-sm-8 col-xs-8">
+            <h2 class="text-primary">element 1 </h2>
+            <form (ngSubmit)="modifierPresentation(f1)" #f1="ngForm">
+                <input type="text" class="form-control" name="titre" [ngModel]="h.presentation.titre" id="">
+                <textarea placeholder="description" name="description" class="" class="form-control"
+                    [ngModel]="h.presentation.description"> </textarea><br>
 
 
-<div class="credo bg-dark col-lg-4 col-md-5 col-sm-8 col-xs-8">
-    <h2 class="text-success">modifier  credo </h2>
-<form  (ngSubmit)="modifierCredo(f2)" #f2="ngForm">
-  
+                <label for="img1" class="btn btn-danger"><i class="fa fa-file-image-o" aria-hidden="true"></i> modifier
+                    l image </label> <input type="file" id="img1" name="image" (change)="uploadImage($event)">
+                <br>
+                <img [src]="imagedata1" style="height:50px; width:100px;margin:10px;" *ngIf="imagedata1!=null"
+                    alt="imagedata1">
+                <button type="submit" class="btn btn-primary btn-lg">Modifier</button>
+            </form>
+        </div>
 
-<textarea placeholder="description" name="description" [ngModel]="t.home[1].description"> </textarea><br>
-  
-      <label  for="img2" class="btn btn-danger"><i class="fa fa-file-image-o" aria-hidden="true"></i>        modifier l image </label>  <input  type="file" placeholder="Titre" name="image" (change)="uploadimage2($event)" id="img2">
- 
-      <br>
-<button type="submit" class="btn btn-success btn-lg">modifier</button>
-</form>
+
+        <div class="credo bg-light col-lg-4 col-md-5 col-sm-8 col-xs-8">
+            <h2 class="text-primary">element 2 </h2>
+            <form (ngSubmit)="modifierCredo(f2)" #f2="ngForm">
+
+                <input type="text" name="titre" class="form-control" [ngModel]="h.credo.titre" id="">
+
+                <textarea placeholder="description" name="description" class="form-control"
+                    [ngModel]="h.credo.description"> </textarea><br>
+
+
+                <button type="submit" class="btn btn-primary btn-lg">modifier</button>
+            </form>
+
+        </div>
+
+
+        <div class="credo bg-light col-lg-4 col-md-5 col-sm-8 col-xs-8">
+            <h2 class="text-primary">modifier Vision </h2>
+            <form (ngSubmit)="modifierVision(f4)" #f4="ngForm">
+
+                <input type="text" name="titre" class="form-control" [ngModel]="h.vision.titre" id="">
+
+                <textarea placeholder="description" name="description" class="form-control"
+                    [ngModel]="h.vision.description"> </textarea><br>
+
+
+                <button type="submit" class="btn btn-primary btn-lg">modifier</button>
+            </form>
+
+        </div>
+
+        <div class="credo bg-light col-lg-4 col-md-5 col-sm-8 col-xs-8">
+            <h2 class="text-primary">modifier Mission </h2>
+            <form (ngSubmit)="modifierMission(f3)" #f3="ngForm">
+
+                <input type="text" class="form-control" name="titre" [ngModel]="h.mission.titre" id="">
+
+                <textarea placeholder="description" name="description" class="form-control"
+                    [ngModel]="h.mission.description"> </textarea><br>
+
+
+                <button type="submit" class="btn btn-primary btn-lg">modifier</button>
+            </form>
+
+        </div>
+
+
+    </div>
+
 
 </div>

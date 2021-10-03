@@ -1,35 +1,40 @@
+.activite{
 
-#titre{
-    color:#F4C613;
-    margin-top: 90px;
-    padding-top: 50px;
-    padding-bottom: 200px;
-    font-size: 40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-   text-align: center;
-   background-repeat: no-repeat;
-   background:url('./../../assets/image/wp.png')
+
+    background:url('./../../assets/151954326_1585504544967787_9202209730000787718_n.jpg');
+color:white;
+width:100%;
+height:85vh;
+
+background-size: 100%;
+background-position: center;
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+.container{
+    background-attachment: scroll;
+}
+.activite a{
+  color:white;
+  
+  
+
+  
+}
+
+
+.activite h1{
+padding-top: 10%;
+padding-left: 10%;
 }
 .row{
     margin-top: 10vh;
 }
 .media{
-    padding:10px;
-    margin-bottom: 10vh;
-    display: flex;
+    margin-top: 50px;
+    margin-bottom:50px;
 }
-.media img{
-
-    height: 90px;
-    width:40%;
-    margin-top: 60px;
-    position: absolute;
-  margin-left: 10%;
-  margin-bottom: 40px;
-  clear: both;
-}
-
-
 
 iframe{
   float: right;
@@ -39,17 +44,24 @@ iframe{
     margin-top: 40px;
   
 }
-.text{text-align: center;
-    padding-left: 30%;
+.text{
+    width:100%;
+
 }
 .text span{
-    width: 100%;
+    
 }
 .titre{
     font-size: 20px;
     font-weight: bold;
+
 }
 .description{
+    
 font-size: 17px;
 color:rgb(80, 79, 79);
+}
+
+.carousel{
+    width:100%;height:60vh;
 }

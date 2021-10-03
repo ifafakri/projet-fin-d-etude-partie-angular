@@ -1,0 +1,247 @@
+
+<div class="projet">
+
+<button mat-raised-button color="accent" class="offset-5"
+style="margin-left: 30%;"  data-toggle="modal" data-target="#exampleModal4"> Ajout Formation </button> 
+
+  <!-- Table -->
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 col-lg-8 offset-lg-3 offset-md-3   col-md-8   " >
+
+    <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="titre">
+      <th mat-header-cell *matHeaderCellDef> titre &nbsp; </th>
+      <td mat-cell *matCellDef="let element" style="width:10%;"> {{element.titre}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="text">
+      <th mat-header-cell *matHeaderCellDef style="width:20%;"> text &nbsp; </th>
+      <td mat-cell *matCellDef="let element" > {{element.text}} </td>
+    </ng-container>
+
+    <!-- images -->
+    <ng-container matColumnDef="images">
+      <th mat-header-cell *matHeaderCellDef> images &nbsp; </th>
+      <td mat-cell *matCellDef="let element"><img *ngFor="let i of element.image" [src]="i" alt=""
+          style="width:80px;height:80px;display:block;margin-left:10px;"> </td>
+    </ng-container>
+
+    <!-- Inscription -->
+    <ng-container matColumnDef="inscription">
+      <th mat-header-cell *matHeaderCellDef style="width:10%;"> inscription   </th>
+      <td mat-cell  *matCellDef="let element">
+       
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="ins" id="" [ngModel]="element.inscrir"
+                (change)="modifInscrir($event,element.id)">
+            </label>
+          </div>
+
+ 
+
+
+
+      </td>
+    </ng-container>
+    <!-- modufication -->
+    <ng-container matColumnDef="modufication" *ngIf="r.formation.modufication || m.poste=='president'" >
+      <th mat-header-cell *matHeaderCellDef> modufication &nbsp; </th>
+      <td mat-cell *matCellDef="let element"> <button mat-stroked-button color="primary" data-toggle="modal"
+          data-target="#exampleModal2" (click)="changer(element.id)">modifier</button> </td>
+    </ng-container>
+    <!-- Suppression -->
+    <ng-container matColumnDef="supprission" *ngIf="r.formation.suppression || m.poste=='president'">
+      <th mat-header-cell *matHeaderCellDef> supprission &nbsp; </th>
+      <td mat-cell *matCellDef="let element"><button mat-raised-button color="warn" data-toggle="modal"
+          data-target="#exampleModal" (click)="supprimerformation(element.id)">supprimer</button> </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+
+
+  <!-- Modal suppression -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">supprimer formation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-danger">
+            element supprimer
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal modification -->
+  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">modifier formation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <form class="form-group " (ngSubmit)="modificationformation(f2)" #f2="ngForm">
+              <h2 class="text-primary" style="text-align: center;">modifier formation </h2>
+              <div class="form-inline">
+                <label class="text-secandary"> id:</label> <input type="text" style="width: 90%;" placeholder="id"
+                  class="form-control" readonly [ngModel]="id" name="id">
+              </div>
+              <div class="form-inline">
+                <label class="text-secandary"> Titre:</label> <input type="text" style="width: 90%;" placeholder="Titre"
+                  class="form-control" ngModel name="titre">
+              </div>
+
+              <div class="form-inline">
+                <label> Text:</label>
+                <textarea placeholder="Text" class="form-control" cols=43 rows=5 name="text" ngModel>  </textarea>
+              </div>
+              <div class="form-inline">
+                Date de formation: <input type="date" name="dat" class="form-control" ngModel id="">
+              </div>
+              <br>
+              <div class="form-inline">
+                <label> Formateur:</label>
+                <input type="text" placeholder="text" class="form-control" cols=43 rows=5 name="formateur" ngModel>
+              </div>
+
+              <div class="form-inline">
+                <label> liens drive:</label>
+                <input type="text" placeholder="text" class="form-control" cols=43 rows=5 name="liens" ngModel>
+              </div>
+
+
+
+              <div class="form-inline">
+
+
+                <!--(change)="uploadImage($event)-->
+                <label for="img3" class="btn btn-danger btn-block"><i class="fa fa-file-image-o" aria-hidden="true"></i>
+                  modifier l image </label> <input type="file" multiple id="img3" name="image"
+                  (change)="uploadImage2($event)">
+                <br>
+              </div>
+
+
+
+
+              <button type="submit" class="btn btn-primary btn-lg btn-block">modifier</button>
+            </form>
+            <div class="card" *ngFor="let l2 of listImage2">
+              <img [src]="l2" style="height:50px;width:100px;display:inline-block;" *ngIf="listImage2.length>0">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<!--Model -->
+<div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      
+
+        <div class="ajout col-8" *ngIf="r.formation.ajout || m.poste=='president'">
+
+          <form class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12" (ngSubmit)="ajoutformation(f1)" #f1="ngForm">
+            <h2 class="text-primary" style="text-align: center;">Ajout formation </h2>
+            <div class="form-inline">
+              <label class="text-secandary"> Titre:</label> <input type="text" style="width: 80%;" placeholder="titre"
+                class="form-control" ngModel name="titre">
+            </div>
+            <br>
+            <div class="form-inline">
+              <label> Text:</label>
+              <textarea placeholder="text" class="form-control" cols=43 rows=5 name="text" ngModel>  </textarea>
+            </div>
+            <br>
+      
+      
+            <div class="form-inline">
+              Date de formation: <input type="date" name="dat" class="form-control" ngModel id="">
+            </div>
+            <br>
+            <div class="form-inline">
+              <label> Formateur:</label>
+              <input type="text" placeholder="text" class="form-control" cols=43 rows=5 name="formateur" ngModel>
+            </div>
+      
+            <div class="form-inline">
+              <!--(change)="uploadImage($event)-->
+              <label for="img0" class="btn btn-danger btn-block"><i class="fa fa-file-image-o" aria-hidden="true"></i>
+                modifier l image </label> <input type="file" multiple id="img0" name="image" (change)="uploadImage($event)">
+              <br>
+            </div>
+      
+
+            <div class="form-inline">
+              <label> liens drive:</label>
+              <input type="text" placeholder="text" class="form-control" cols=43 rows=5 name="liens" ngModel>
+            </div>
+
+
+            <div class="card" *ngFor="let l1 of listImage">
+              <img [src]="l1" style="height:50px;width:100px;display:inline-block;" *ngIf="listImage.length>0">
+            </div>
+      
+      
+      
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Ajout</button>
+          </form>
+      
+      
+        </div>
+      
+      
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

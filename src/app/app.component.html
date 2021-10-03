@@ -1,5 +1,62 @@
-<app-menu  *ngIf="router.url !== '/login' && router.url !== '/gestionMembre'  && router.url !== '/page' && router.url!=='/dashoardAdmin'" ></app-menu>
+<app-menu  *ngIf="router.url !== '/login' 
+&& router.url !== '/gestionMembre'  && router.url !== '/page' 
+&& router.url!=='/dashoardAdmin' && router.url!=='/modifieHome'
+&& router.url!=='/modifMedia' && router.url!='/listeRecrutement' 
+&& router.url!='/modifformation' && router.url!='/projet' 
+&& router.url!='/accee' && router.url!='/recrutementdetail/'
+ && router.url!='/historiqueU' && router.url!='/listeContact' 
+ && router.url!='/config' && router.url!='/profile' 
+ && router.url!='/modifierAdhesion'
+   && router.url!='/modiPresentation' && router.url!='/modifhistoire' 
+   
+   && router.url!='/modifierPartenair'
+   && router.url!='/modifDeveloppement'
+   && router.url!='/bureaux'
+   && router.url!='/payement'
+
+&& router.url.indexOf('listecommantaire')<0
+&& router.url!='/gestionCommantaire'
+
+   && router.url!='/listeInscrir' 
+   && router.url.indexOf('inscrirDetails')<0
+   
+   
+   && router.url.indexOf('listecommantaire')<0
+   && router.url.indexOf('modifAccee')<0
+   "></app-menu>
 
 <router-outlet> </router-outlet> ‏
-<app-admindashboard *ngIf="router.url=='/gestionMembre' || router.url=='/page' || router.url=='/dashoardAdmin'  "></app-admindashboard>
+<app-admindashboard *ngIf="router.url=='/gestionMembre' 
+
+|| router.url=='/page' || router.url=='/dashoardAdmin' 
+|| router.url=='/modifieHome' || router.url=='/modifMedia'  
+|| router.url=='/listeRecrutement' ||  router.url=='/modifformation' 
+|| router.url=='/projet' || router.url=='/accee'  || router.url=='/historiqueU' 
+|| router.url=='/listeContact' || router.url=='/config' || router.url=='/profile'
+ || router.url=='/modifierAdhesion'  
+ || router.url=='/modiPresentation'  
+ || router.url=='/modifDeveloppement'
+ || router.url=='/modifhistoire'
+ || router.url=='/modifierPartenair'
+ || router.url=='/gestionCommantaire'
+ || router.url=='/listeInscrir'
+ || router.url.indexOf('inscrirDetails')>0
+ || router.url.indexOf('listecommantaire')>0
+ || router.url.indexOf('modifAccee')
+ && router.url!='/'
+ && router.url!='/home'
+ && router.url!='/presentation'
+  && router.url!='/media'
+  && router.url!='/developpement'
+  && router.url!='/activite'
+  && router.url.indexOf('formationdetails')<0
+  && router.url.indexOf('projetDetails')<0
+  && router.url.indexOf('contact')<0
+  && router.url.indexOf('recrutement')<0
+
+
+
+ ">    <button type="button" class="mn" mat-raised-button >
+    menu
+   </button> </app-admindashboard>
 

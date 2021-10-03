@@ -2,6 +2,26 @@ import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
 import { Observable, Subscriber } from 'rxjs';
 import{PageServiceService} from './../pages-service/page-service.service';
+import{LoginserviceService} from './../loginservice/loginservice.service';
+import{AcceeServiceService} from './../accee/accee-service.service';
+import { ToastrService } from 'ngx-toastr';
+
+export interface PeriodicElement {
+  _id:number
+  nom: string;
+
+  prenom: string;
+
+  dnais:string;
+  numtel:string;
+  mail:string;
+  poste:string;
+  dateposte:string;
+  motpass:string;
+
+
+
+}
 interface obj{
 image:string,
 description:string
@@ -12,6 +32,14 @@ interface page{
     adhesion:[{titre:string,description:string},{titre:string,description:string},{titre:string,description:string}],
     presentation:[{titre:string,description:string,image:string},{titre:string,description:string,image:string},{titre:string,description:string,image:string},{titre:string,description:string,image:string}]
 }
+interface home{
+  vision:{titre:string,description:string},
+  mission:{titre:string,description:string},
+  presentation:{titre:string,description:string,image:string},
+  credo:{titre:string,description:string},
+  
+  }
+
 @Component({
   selector: 'app-modifier-home',
   templateUrl: './modifier-home.component.html',
@@ -23,15 +51,38 @@ selectedFile:File
 obj1:obj
 obj2:obj
 t:page
-  constructor(private pserv:PageServiceService) { }
+m:PeriodicElement
+h:home
+  dat : string = new Date().toDateString();
+  constructor(private pserv:PageServiceService,private logsrv:LoginserviceService,private acsrv:AcceeServiceService
+ ,private toast:ToastrService   ) { }
 
-  ngOnInit(): void {
-this.pserv.getPage().subscribe(data =>{
-data.forEach(element => {
-  this.t=element
-});
+ async ngOnInit() {
+
+    var token=localStorage.getItem('token')
+ 
+
+    let email=await this.logsrv.isConnect({t:token})
+  console.log(email)
   
-})
+this.logsrv.getMembre(email).toPromise().then(
+  (data:PeriodicElement)=>{
+this.m=data
+
+
+  }
+)
+
+
+
+
+
+this.pserv.getHome().toPromise().then(
+  (data:home)=>{
+    this.h=data
+    console.log(this.h)
+  }
+)
 
 
 
@@ -91,19 +142,54 @@ readFile(file:File,subsciber:Subscriber<any>){
 
 }
 
-  modifierVision(f1:NgForm){
-this.obj1={image:this.imagedata1,description:f1.value.description}
-this.pserv.modifierVisioHome(this.obj1).subscribe(data =>{
+  modifierPresentation(f1:NgForm){
+
+this.pserv.modifierPresentationHome({titre:f1.value.titre,image:this.imagedata1,description:f1.value.description}).subscribe(data =>{
   
 })
 
+this.acsrv.AjoutHistoriqUser({nom:this.m.nom,prenom:this.m.prenom,action:'m',description:'modifer page home : presentation ',date:this.dat}).subscribe()
+
+
+this.toast.success(' ','presentation modifier  ')
+
+
   }
+
+
   modifierCredo(f:NgForm){
-    this.obj2={image:this.imagedata2,description:f.value.description}
-    this.pserv.modifierCredoHome(this.obj2).subscribe(data =>{
+    
+    this.pserv.modifierCredoHome({titre:f.value.titre,description:f.value.description}).subscribe(data =>{
       
     })
+
+    this.acsrv.AjoutHistoriqUser({nom:this.m.nom,prenom:this.m.prenom,action:'m',description:'modifier page home : credo ',date:this.dat}).subscribe()
+
+
+    this.toast.success(' ','credo modifier  ')
+
+
   }
+
+  //modifier vision
+  modifierVision(f:NgForm){
+    this.pserv.modifierVisionHome({titre:f.value.titre,description:f.value.description}).subscribe()
+    this.acsrv.AjoutHistoriqUser({nom:this.m.nom,prenom:this.m.prenom,action:'m',description:'modifier page home : Vision ',date:this.dat}).subscribe()
+ 
+this.toast.success(' ','vision modifier  ')
+}
+
+
+  // modifier Mission
+  modifierMission(f:NgForm){
+    this.pserv.modifierMissionHome({titre:f.value.titre,description:f.value.description}).subscribe()
+    this.acsrv.AjoutHistoriqUser({nom:this.m.nom,prenom:this.m.prenom,action:'m',description:'modifier page home : Mission ',date:this.dat}).subscribe()
+  
+this.toast.success(' ','mission modifier  ')
+
+  
+  }
+
 
 
 

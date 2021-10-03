@@ -1,0 +1,108 @@
+
+<div class="bureax">
+     <button class="btn btn-primary  offset-lg-6 offset-md-6" data-toggle="modal" data-target="#exampleModal">Ajout personne au bureaux</button>
+
+     <table class="table table-bordered col-md-10 col-sm-10 col-xs-10 offset-lg-3 offset-md-3">
+        <thead>
+          <tr>
+            <th scope="col">nom</th>
+            <th scope="col">prenom</th>
+            <th scope="col">description</th>
+            <th scope="col">poste</th>
+            <th scope="col">modifiet poste</th>
+            <th scope="col">supprimer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let l of listB"  >
+            <th scope="row" style="width:10%;">{{l.nom}} </th>
+            <td style="width:10%;">{{l.prenom}}</td>
+            <td style="width:10%;">{{l.description}}</td>
+            <td>{{l.poste}}</td>
+            <td style="width:10%;"> <button class="btn btn-warning" >modifiet poste</button> </td>
+            <td>  <button class="btn btn-danger"  (click)="supprimerBureaux(l._id)" >supprimer</button>  </td>
+
+
+        </tr>
+        
+        </tbody>
+      </table>
+
+
+
+
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ajout personne aux bureaux</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+     
+         <form (ngSubmit)="AjoutPerson(f1)"   #f1="ngForm">
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">nom</label>
+                <input type="text" name="nom" class="form-control" ngModel id="exampleInputPassword1">
+              </div>
+              <div class="form-group">
+                <label for="">prenom</label>
+                <input type="text" class="form-control" name="prenom" ngModel id="">
+              </div>
+              
+              <div class="form-group">
+                <label for="description">description</label>
+                <input type="text" class="form-control" name="description" ngModel id="">
+              </div>
+              
+              <div class="form-group"  >
+                <label for="mail">mail</label>
+                <input type="text" class="form-control" name="mail" ngModel id="mail">
+              </div>
+
+              <div class="form-group">
+                <label for="description">poste</label>
+                
+                <select name="poste" class="form-control" ngModel id="">
+
+                    <option value="senateur">senateur</option>
+                    <option value="past-presedent">past-presedent</option>
+                    <option value="conseille juridique">conseille juridique</option>
+                    <option value="past president immédiat">past president immédiat</option>
+                    
+                
+
+
+                </select>
+                
+
+
+                <input type="file" name="image" (change)="changerImage($event)" id="">
+
+
+
+<input type="submit" class="btn btn-primary btn-lg btn-block" value="Ajout">
+
+
+              </div>
+
+
+         </form>
+
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

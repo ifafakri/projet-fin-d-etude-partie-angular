@@ -1,0 +1,84 @@
+.activite{
+
+
+    background:url('./../../assets/151954326_1585504544967787_9202209730000787718_n.jpg');
+color:white;
+width:100%;
+height:85vh;
+
+background-size: 100%;
+background-position: center;
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+.activite a{
+  color:white;
+  
+  
+
+  
+}
+
+
+.activite h1{
+padding-top: 10%;
+padding-left: 10%;
+}
+
+#titre {background-attachment: scroll;
+    margin:10%;
+    text-align: center;
+    font-family:  'Goblin One', cursive;
+}
+
+.billon{margin-left: 7%;
+    padding:2%;
+margin-top: 30px;
+  
+    color:white;
+}
+.icon{float:left;
+    font-size: 5rem;
+    color:white;
+    width:30%;
+    height:150px;
+}
+.text{width:90%;
+
+}
+.text h1{font-family: 'Lato', sans-serif;
+
+    font-size: 22px;
+
+}
+.text p{font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+.formation{clear: both;
+    margin-top: 50px;
+    background-attachment: scroll;
+}
+.formation img{
+height:300px;
+margin-left: 20px;
+}
+.formation hr{
+    color:gray;
+    width:100%
+    
+}
+.formation h1{
+    color:black;
+    font-weight: bold;
+}
+.formation .text{
+    margin-left: 20px;
+padding-top: 20px;
+}
+.formation a{
+    color:gray;
+    float: bottom;
+display: block;
+}

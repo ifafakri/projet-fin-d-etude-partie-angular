@@ -1,0 +1,60 @@
+<div class="activite">
+
+   <h1></h1>
+
+
+
+
+</div>
+
+
+
+
+<h1 id="titre">Les {{dev.length}} Piliers de notre mouvement</h1>
+
+
+
+
+<div class="billon col-10"  *ngFor="let d of dev"  >
+    <div class="icon" >
+        <i [class]="'fa '+d.icon" aria-hidden="true"></i>
+    </div>
+
+    <div class="text">
+        <h1>  {{d.titre}} </h1>
+        <p> 
+            {{d.text}}
+        </p>
+
+    </div>
+
+
+
+
+</div>
+
+
+
+<h1 id="titre" >Formation </h1>
+
+
+
+<div class="formation" *ngFor="let f of formation" data-aos="fade-right">
+
+
+    <div class="row">
+        <img [src]="f.image[0]" class="col-lg-5 col-md-5 col-sm-10 col-xs-10" alt="">
+
+        <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10 text">
+
+            <h1> {{f.titre}} </h1>
+
+            <p> {{minimiser(f.text) }}</p>
+
+
+            <a [href]="url+f.id">lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
+
+        <hr>
+    </div>
+</div>

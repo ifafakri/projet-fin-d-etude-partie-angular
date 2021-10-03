@@ -26,11 +26,19 @@
                         <input type="file" name="img2" (change)="uploadImage2($event)" id="img2">
                     </div>
 
+ 
+
+
                     <div class="form-group">
                         <label for="">Url video</label> <input type="text" name="video" placeholder="url video" id=""
                             class="form-control" ngModel>
 
                     </div>
+
+   <img [src]="imageData2" *ngIf="imageData2!=null" style="height:50px;width:100px;margin:10px;display:block" alt="">
+
+
+
  <button type="submit" class="btn btn-primary">Modifier</button>
 
                 </form>
@@ -77,21 +85,23 @@
                 ngModel>
 
         </div>
-        <div class="form-inline">
+        <div class="form-group">
             <label for="">Description</label> <textarea name="description" placeholder="description" cols="50"
                 class="form-control" ngModel></textarea>
 
         </div>
         <div class="form-inline">
-            <label for="img2" class="btn btn-danger"><i class="fa fa-file-image-o" aria-hidden="true"></i> imorter une
+            <label for="img3" class="btn btn-danger"><i class="fa fa-file-image-o" aria-hidden="true"></i> imorter une
                 image </label>
-            <input type="file" name="img2" (change)="uploadImage($event)" id="img2">
+            <input type="file" name="img2" (change)="uploadImage($event)" id="img3">
         </div>
         <div class="form-group">
             <label for="">Url video</label> <input type="text" name="video" placeholder="url video" id=""
                 class="form-control" ngModel>
 
         </div>
+        <img [src]="imageData" *ngIf="imageData!=null" style="height:50px;width:100px;margin:10px;display:block;" alt="">
+
         <button type="submit" class="btn btn-primary btn-lg btn-block">Ajouter</button>
     </form>
 </div>
@@ -121,9 +131,9 @@
                 <td>     <iframe width="100" height="100" [src]="m.video" frameborder="0" allowfullscreen>
 
                     </iframe> </td>
-                <td> <button class="btn btn-primary" data-toggle="modal" (click)="changeId(m._id)" data-target="#exampleModal"> modifier </button>
+                <td> <button class="btn btn-primary" data-toggle="modal" (click)="changeId(m.id)" data-target="#exampleModal"> modifier </button>
                 </td>
-                <td> <button class="btn btn-danger" data-toggle="modal" (click)="supprimerMedia(m._id)" data-target="#exampleModa2">supprimer </button> </td>
+                <td> <button class="btn btn-danger" data-toggle="modal" (click)="supprimerMedia(m.id,m.titre)" data-target="#exampleModa2">supprimer </button> </td>
             </tr>
         </tbody>
 

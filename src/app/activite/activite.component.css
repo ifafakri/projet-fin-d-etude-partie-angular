@@ -1,17 +1,53 @@
-#titre{
-    color:#F4C613;
-    margin-top: 90px;
-    padding-top: 50px;
-    padding-bottom: 200px;
-    font-size: 40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-   text-align: center;
-   background-repeat: no-repeat;
-   background:url('./../../assets/image/wp.png')
+.activite{
+
+
+    background:url('./../../assets/151954326_1585504544967787_9202209730000787718_n.jpg');
+color:white;
+width:100%;
+height:85vh;
+
+background-size: 100%;
+background-position: center;
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+.activite a{
+  color:white;
+  
+  
+
+  
 }
 
 
-.card{
-    margin-left: 40px;
-    margin-top: 30px;
+.activite h1{
+padding-top: 10%;
+padding-left: 10%;
+}
+.formation{clear: both;
+    margin-top: 50px;
+    background-attachment: scroll;
+}
+.formation img{
+height:300px;
+margin-left: 20px;
+}
+.formation hr{
+    color:gray;
+    width:100%
+    
+}
+.formation h1{
+    color:black;
+    font-weight: bold;
+}
+.formation .text{
+    margin-left: 20px;
+padding-top: 20px;
+}
+.formation a{
+    color:gray;
+    float: bottom;
+display: block;
 }

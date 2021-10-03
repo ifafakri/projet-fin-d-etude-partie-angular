@@ -2,6 +2,7 @@ import { Component,OnInit,Input } from '@angular/core';
 import{LoginserviceService} from './loginservice/loginservice.service';
 import {FormsModule} from '@angular/forms';
 import {Router} from '@angular/router';
+import{ActivatedRoute} from '@angular/router';
 import{NgForm} from '@angular/forms';
 import * as AOS from 'aos';
 
@@ -15,7 +16,9 @@ title=''
 logedIn = false
 @Input() v:boolean
 @Input()  v2:boolean
-constructor(private servAdmin:LoginserviceService,public router:Router){
+id:number
+ch:any
+constructor(private servAdmin:LoginserviceService,public router:Router,private r:ActivatedRoute){
   this.logedIn = localStorage.getItem('logedIn') =="true" ;
 setInterval(()=>{
 this.v= this.servAdmin.ShowAdminDashboard
@@ -25,9 +28,11 @@ this.v= this.servAdmin.ShowAdminDashboard
 }
 
   ngOnInit(): void {
-   
-     
+   this.id=this.r.snapshot.params['id']
+   console.log(this.id)
+    
     AOS.init()
+
 
 
 

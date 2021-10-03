@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "https://srvr.jcisidimansour.tn",
+      "secure": false , "pathRewrite": {
+        "^/api": ""
+      }
+
+    }
+  }

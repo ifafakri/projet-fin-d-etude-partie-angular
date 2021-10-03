@@ -1,67 +1,43 @@
-<h1 id="titre"> Activites</h1>
-<div class="row">
-    <div class="card bg-primary text-light" style="width: 18rem;" data-aos="fade-right">
-        <img class="card-img-top"
-            src="https://www.jcitunisia.com/wp-content/uploads/2021/01/142220926_4006690489365355_6326911769694946171_o.png"
-            alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+<div class="activite">
+
+    <h1>
+
+        <a href="/" style="font-size: 25px;">Accueil</a> <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        Actions
+        <h2 style="font-size: 25px;">programme</h2>
+    </h1>
+
+
+
+
+
+</div>
+
+
+
+
+
+<div class="formation" *ngFor="let p of projet" data-aos="fade-right">
+
+
+    <div class="row">
+        <img [src]="p.image[0]" class="col-lg-5 col-md-5 col-sm-10 col-xs-10" alt="">
+
+        <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10 text">
+
+            <h1> {{p.titre}} </h1>
+
+            <p> {{minimiser(p.text) }}</p>
+
+
+            <a [href]="url2+p.id">lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
         </div>
-    
-        <div class="card-body">
-            <a href="#" class="btn btn-warning">Details</a>
-    
-        </div>
-    </div>
-    
-    <div class="card bg-warning text-light" style="width: 18rem;" data-aos="fade-right">
-        <img class="card-img-top"
-            src="https://www.jcitunisia.com/wp-content/uploads/2021/01/142220926_4006690489365355_6326911769694946171_o.png"
-            alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-        </div>
-    
-        <div class="card-body">
-            <a href="#" class="btn btn-warning">Details</a>
-    
-        </div>
-    </div>
-    
-    
-    <div class="card " style="width: 18rem;" data-aos="fade-right">
-        <img class="card-img-top"
-            src="https://www.jcitunisia.com/wp-content/uploads/2021/01/142220926_4006690489365355_6326911769694946171_o.png"
-            alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-        </div>
-    
-        <div class="card-body">
-            <a href="#" class="btn btn-primary">Details</a>
-    
-        </div>
-    </div>
-    
-    <div class="card bg-success text-light" style="width: 18rem;" data-aos="fade-right">
-        <img class="card-img-top"
-            src="https://www.jcitunisia.com/wp-content/uploads/2021/01/142220926_4006690489365355_6326911769694946171_o.png"
-            alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-        </div>
-    
-        <div class="card-body">
-            <a href="#" class="btn btn-warning">Details</a>
-    
-        </div>
+
+        <hr>
     </div>
 </div>
+
+
+
+
+<app-footer> </app-footer>

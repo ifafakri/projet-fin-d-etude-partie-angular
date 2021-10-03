@@ -1,23 +1,23 @@
-<div class="presentation-general bg-dark col-lg-4 col-md-4 col-sm-8 col-xs-8">
-    <h2 class="text-success"> partie 1</h2>
+<div class="card presentation-general bg-light col-lg-4 col-md-4 col-sm-8 col-xs-8">
+    <h2 class="text-primary"> partie 1</h2>
         <form (ngSubmit)="modifierpartie1(f)" #f="ngForm">
     <textarea placeholder="description" name="description" [ngModel]="t.historique[0].description"> </textarea> <br>
     <label  for="img2" class="btn btn-danger"><i class="fa fa-file-image-o" aria-hidden="true"></i>        modifier l image </label>  <input  type="file" placeholder="Titre" (change)="uploadImage($event)" id="img2">
       <br>  <input  type="file" placeholder="Titre" id="img1">
-     <button type="submit" class="btn btn-success">modifier</button>
+     <button type="submit" class="btn btn-primary">modifier</button>
     
         </form>
     
     
     </div>
 
-    <div class="presentation-general bg-dark col-lg-4 col-md-4 col-sm-8 col-xs-8">
-        <h2 class="text-success"> partie 2</h2>
+    <div class="card presentation-general bg-light col-lg-4 col-md-4 col-sm-8 col-xs-8">
+        <h2 class="text-primary"> partie 2</h2>
             <form (ngSubmit)="modifierpartie2(f2)" #f2="ngForm">
         <textarea placeholder="description"  name="description" [ngModel]="t.historique[1].description" > </textarea> <br>
         <label  for="img3" class="btn btn-danger"><i class="fa fa-file-image-o" aria-hidden="true"></i>        modifier l image </label>  <input  type="file" placeholder="Titre" (change)="uploadimage2($event)" id="img3">
       <br> 
-         <button type="submit" class="btn btn-success">modifier</button>
+         <button type="submit" class="btn btn-primary">modifier</button>
         
             </form>
         

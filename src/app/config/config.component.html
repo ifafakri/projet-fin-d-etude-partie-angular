@@ -1,0 +1,45 @@
+<div class="config">
+
+<form  class=" col-lg-6 col-md-6 offset-lg-3 offset-md-3" (ngSubmit)="modifierConfigMail(f)"  #f="ngForm">
+<h2 class="text-primary"> modifier le liens drive</h2>
+<div class="form-group">
+
+    <label for="">url liens drive</label>
+    <input type="text" name="mail" class="form-control" [ngModel]="c.email" id="">
+    
+    </div>
+   
+<input type="submit" value="changer" class="btn btn-primary">
+
+
+</form>
+
+
+
+<form   class=" col-lg-6 col-md-6 offset-lg-3 offset-md-3" (ngSubmit)="modifierDatRect(f2)" #f2="ngForm">
+    <h2 class="text-primary"> modifier le date de recrutement</h2>
+
+<div class="form-group"  >
+    <label for="">date debit</label> <input type="date" name="dated" ngModel id="">
+
+</div>
+    
+<div class="form-group">
+      <label for="">date fin</label> <input type="date" name="datef" ngModel id="">
+
+</div>
+  
+
+<input type="submit" value="changer" class="btn btn-primary">
+
+</form>
+
+
+
+
+
+
+
+</div>
+
+

@@ -1,0 +1,120 @@
+<div class="activite">
+
+
+
+   
+
+
+
+
+</div>
+
+<div class="projet">
+    <img [src]="projet.image[0]" alt="" data-aos="fade-up" id="im1">
+    <h1 data-aos="zoom-in">{{projet.titre}} </h1>
+    <p class="dat">date de formation : {{ getdat(projet.dat) }} </p>
+<h2>Formateur : {{projet.formateur}}  </h2>
+    <p class="text">
+        {{projet.text}}
+    </p>
+
+
+    <div *ngFor="let i of projet.image" data-aos="zoom-in">
+        <img class="im" [src]="i" alt="">
+
+    </div>
+
+
+
+    <share-buttons [theme]="" [include]="['facebook','whatsapp','linkedin','copy']" [show]="9" [size]="1">
+    </share-buttons>
+
+</div>
+
+<button mat-raised-button color="primary" style="margin:5%;" data-toggle="modal" data-target="#exampleModal"  *ngIf="projet.inscrir"> S'inscrire</button>
+
+
+
+<div class="commentaire">
+
+    <h2> commentaires( {{com.length}} ) </h2>
+    <div class="com" *ngFor="let c of com">
+        <img src="./../../assets/user.png" id="user" alt="">
+        <div class="contenu">
+            <h2> <a [href]="c.siteweb"> {{c.nom}} </a> </h2>
+            <p> {{ c.comantaire }} </p>
+
+        </div>
+    </div>
+
+
+
+
+    <h2> Laisser un commentaire</h2>
+
+    <form class="col-lg-6 col-md-6 col-sm-8 col-xs-8" (ngSubmit)="ajoutCommantaire(f)" #f="ngForm">
+        <p> Votre adresse e-mail ne sera pas publiée. Les champs obligatoires sont indiqués avec *
+        </p>
+
+        <div class="form-group">
+            <label for="">commantaire *</label>
+            <textarea class="form-control" name="comantaire" ngModel> </textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="">Nom * </label>
+            <input type="text" class="form-control" name="nom" [ngModel]="nom" id="">
+        </div>
+
+        <div class="form-group">
+            <label for="">E-mail * </label>
+            <input type="text" class="form-control" name="email" [ngModel]="email" id="">
+        </div>
+
+        <div class="form-group">
+            <label for="">site web </label>
+            <input type="text" class="form-control" name="siteweb" [ngModel]="site" id="">
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="enr" [ngModel]="false">
+            <label>
+                Enregistrer mon nom, mon e-mail et mon site dans le navigateur pour mon prochain commentaire.
+            </label>
+        </div>
+
+        <input type="submit" value="laisser un commantaire">
+
+    </form>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> <button mat-button color="accent"> S'inscrire</button></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <a [href]="projet.liens"> lIENS Drives </a>
+
+
+            </div>
+        </div>
+    </div>

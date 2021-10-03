@@ -7,16 +7,16 @@ textarea{
 }
 
 .partenaire{
-float:left;
-        margin-left: 5%;
+float:right;
+     
         padding:5%;
         margin-top:150px;
     }
 
     .partenaire2{
-      float:left;
+      float:right;
       margin-top:80px;
-        margin-left: 5%;
+       
         padding:5%;
      
     }

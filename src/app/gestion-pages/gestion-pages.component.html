@@ -1,60 +1,27 @@
-<table class="table">
-    <thead>
-      <tr>
-     
-        <th scope="col">page</th>
-        <th scope="col">afficher</th>
-        <th scope="col">modifier</th>
-      </tr>
-    </thead>
-    <tbody>
-    
-      <tr>
-     
-        <td>home</td>
-        <td><a href="/home" class="btn btn-primary"> afficher </a></td>
-        <td><a href="/modifieHome" class="btn btn-warning">modifier</a> </td>
-        
-      
-      </tr>
-      <tr>
-    
-        <td>adhesion</td>
-        <td><a href="/adhesion" class="btn btn-primary"> afficher </a></td>
-        <td><a href="/modifierAdhesion" class="btn btn-warning">modifier</a> </td>
-        
-      
-      </tr>
-      <tr>
-  
-        <td>presentation</td>
-        <td><a href="/presentation" class="btn btn-primary"> afficher </a></td>
-        <td><a href="/modifierPartenair" class="btn btn-warning">modifier</a> </td>
-        
-      
-      </tr>   <tr>
-  
-        <td>historique</td>
-        <td><a href="/histoire" class="btn btn-primary"> afficher </a></td>
-        <td><a href="/modifhistoire" class="btn btn-warning">modifier</a> </td>
-        
-      
-      </tr>
-      <tr>
-  
-        <td>media</td>
-        <td><a href="/media" class="btn btn-primary"> afficher </a></td>
-        <td><a href="/modifMedia" class="btn btn-warning">modifier</a> </td>
-        
-      
-      </tr>
-      <tr>
-       
-        <td>partenaire</td>
-        <td><a href="/partenaire" class="btn btn-primary"> afficher </a></td>
-        <td><a href="/" class="btn btn-warning">modifier</a> </td>
-        
-      
-      </tr>
-    </tbody>
-  </table>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="page">
+    <th mat-header-cell *matHeaderCellDef> page </th>
+    <td mat-cell *matCellDef="let element"> {{element.page}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="affiche">
+    <th mat-header-cell *matHeaderCellDef> affiche </th>
+    <td mat-cell *matCellDef="let element">   <a mat-raised-button color="accent" [href]="element.affiche">affiche la page</a>     </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="modifier">
+    <th mat-header-cell *matHeaderCellDef> modifier </th>
+    <td mat-cell *matCellDef="let element"> <a mat-raised-button color="primary" [href]="element.modifier">modifier </a>   </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+

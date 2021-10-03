@@ -1,0 +1,99 @@
+<div class="container-fluid">
+
+    <div class="row">
+      
+
+    <ul class="nav col-8">
+     
+        <li class="nav-item">
+          <a class="nav-link" (click)="menu('c')">compte</a>
+        </li>
+       
+      </ul>
+
+
+        <div id="formulaire ">
+           
+            <!-- Formulaire du compte -->
+
+
+            <form class="" *ngIf="c" (ngSubmit)="modifCompt(f3)" #f3="ngForm">
+                <h2 class="text-primary">compte</h2>
+
+
+                <div class="input-group mb-3" >
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">email</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="email" aria-label="Username" name="mail"
+                        [ngModel]="email" readonly aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">nom</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="email" aria-label="Username" name="nom"  [ngModel]="m.nom"
+                        aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">prenom</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="prenom" aria-label="Username" name="prenom"  [ngModel]="m.prenom"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">date naissance</span>
+                    </div>
+                    <input type="date" class="form-control"  aria-label="Username" name="dnais" ngModel
+                        aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Tel</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="email" aria-label="Username" name="numtel"  [ngModel]="m.numtel"
+                        aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">mot de passe</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="mot de passe" aria-label="Username"  
+                        name="motpass" [ngModel]="m.motpass" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">image</span>
+                    </div>
+                    <input type="file" class="form-control" aria-label="Username" (change)="upload($event)"
+                        aria-describedby="basic-addon1">
+                </div>
+
+                 <img [src]="testim()" style="height:50px;width:100px;">
+
+
+                <input type="submit" class="btn btn-primary btn-lg btn-block" value="Modifier">
+
+
+            </form>
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+</div>

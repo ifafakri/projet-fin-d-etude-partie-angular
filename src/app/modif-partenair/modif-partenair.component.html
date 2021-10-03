@@ -1,19 +1,20 @@
 
 
-<div class="partenaire bg-dark col-lg-5 col-md-5 col-sm-8 col-xs-8">
-    <h2 class="text-info"> Ajouter un partenaire</h2>
+<div class="card partenaire bg-light col-lg-5 col-md-5 col-sm-8 col-xs-8">
+    <h2 class="text-primary"> Ajouter un partenaire</h2>
     <form class="form-group" (ngSubmit)="ajouterPartenaire(f1)" #f1="ngForm">
 <input type="file" name="img2" (change)="uploadImage($event)" id="img2">
         <div class="btn-group">
         <label  for="img2" class="btn btn-danger"><i class="fa fa-file-image-o" aria-hidden="true"></i>  imorter une image de partenaire </label>  
      
-    
+   
     
       <button type="submit" class="btn btn-primary">Ajouter le nouveau partenaire </button>
     </div>
         
     </form>
-        
+             <img [src]="imageData" *ngIf="imageData!=null" style="height:100px;width:100px;margin:10px;display:block;" alt="">
+
     
     </div>
 

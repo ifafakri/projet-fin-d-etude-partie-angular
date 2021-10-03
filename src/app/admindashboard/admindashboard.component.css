@@ -1,11 +1,71 @@
 .sidenav-container {
   height: 100%;
 background:white;
+align-items: center;
+display:block;
+}
+
+
+.but{
+  margin-left: 40px;
+  color:#F44336;
+}
+.mat-drawer-inner-container::-webkit-scrollbar {
+  display: none;
+}
+.mat-drawer-inner-container::-webkit-scrollbar{
+  display: none;
+}
+
+.logo{
+  width:100px;
+  height:60px;
+  margin-top: 50px;
+  margin-left: 30%;
+}
+.im1{
+  display: flex;
+  align-items: center;
+}
+.pfile{
+  color:#F44336;
+  margin-left: 20%;
+}
+.file a{
+  color:#F44336;
+}
+.profile{
+  width:70px;
+  height:70px;
+  margin-top: 80px;
+  margin-left: 30%;
+  margin-bottom: 20px;
+  display: block;
+  border-radius:50%;
+
+}
+h2{
+  margin-top: 35px;
+  margin-left: 20%;
+  color:black;
+}
+h3{
+  color:#0097D7;
+  margin-top: 30px;
+  margin-left: 20%;
+}
+.mn{
+  
+  top:0px;
+  left:0px;
+position: fixed;
 }
 
 .sidenav {
-  width: 200px;
-background-color: #ee5253;
+  width: 300px;
+background-color: #FFFFFF;
+
+
 }
 
 .sidenav .mat-toolbar {
@@ -29,4 +89,39 @@ background-color: #ee5253;
 .ic{position: relative;
 margin-bottom: -20px;
 margin-top: 5px;
+}
+mat-sidenav-content{
+  background:#ECF0FA;
+}
+.m2 a{
+  color:#8290A4;
+ 
+
+  position: relative;
+}
+.titre{
+  margin-left:10%;
+  font-weight: bold;
+text-transform: uppercase;
+margin-top: 10px;
+margin-bottom: 10px;
+font-size: 15px;
+}
+
+
+
+.titre2 {
+  color:#BED7F9;
+
+  margin-left: 5px;
+
+  font-weight: bold;
+text-transform: uppercase;
+margin-top: 10px;
+
+float:left;
+font-size: 15px;
+}
+mat-icon{
+  margin-right: 2px;
 }

@@ -1,44 +1,40 @@
-<app-admindashboard>
-<div class="b">
+
+
 <br>
 
   <button mat-raised-button color="primary" (click)="AjoutMembre()"> <mat-icon> person_add_disabled</mat-icon> Ajouter membre </button>
  <a href="/gestionMembre" mat-raised-button color="accent"> <mat-icon>autorenew</mat-icon> </a>
 
-  <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource">
+  
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 col-lg-8 offset-lg-3 offset-md-3   col-md-8  ">
   
      
   
       <!-- nom Column -->
-      <ng-container matColumnDef="nom">
-        <th mat-header-cell *matHeaderCellDef> nom </th>
-        <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
+      <ng-container matColumnDef="nom" >
+        <th mat-header-cell *matHeaderCellDef> nom et prenom </th>
+        <td mat-cell *matCellDef="let element"> {{element.nom}} {{element.prenom}} </td>
       </ng-container>
   
-      <!-- mail Column -->
-      <ng-container matColumnDef="prenom">
-        <th mat-header-cell *matHeaderCellDef> prenom </th>
-        <td mat-cell *matCellDef="let element"> {{element.prenom}} </td>
-      </ng-container>
+     
   
       <!-- mail Column -->
-      <ng-container matColumnDef="mail">
+      <ng-container matColumnDef="mail"  style="width:10%;">
         <th mat-header-cell *matHeaderCellDef> mail </th>
-        <td mat-cell *matCellDef="let element"> {{element.mail}} </td>
+        <td mat-cell *matCellDef="let element" > {{element.mail}} </td>
       </ng-container>
       <!--Details-->
-      <ng-container matColumnDef="getdetails">
+      <ng-container matColumnDef="getdetails" >
         <th mat-header-cell *matHeaderCellDef> Details </th>
         <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary" (click)="openDialog(element.mail)"> Details <mat-icon>subject        </mat-icon> </button> </td>
       </ng-container>
      <!--Modifier-->
-     <ng-container matColumnDef="modifier">
+     <ng-container matColumnDef="modifier" >
       <th mat-header-cell *matHeaderCellDef> modifier </th>
       <td mat-cell *matCellDef="let element"> <button mat-raised-button color="accent" (click)="modifierMembre(element.mail)">modifier <mat-icon>app_registration      </mat-icon> </button> </td>
     </ng-container>
     <!--Supprimer-->
-    <ng-container matColumnDef="supprimer">
+    <ng-container matColumnDef="supprimer" >
         <th mat-header-cell *matHeaderCellDef> supprimer </th>
         <td mat-cell *matCellDef="let element"> <button mat-raised-button color="warn" (click)="deleteMembre(element.mail)">supprimer <mat-icon>delete </mat-icon> </button> </td>
       </ng-container>
@@ -47,9 +43,5 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
   
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
-  </div>
-  
-</div>
+ 
 
-</app-admindashboard>

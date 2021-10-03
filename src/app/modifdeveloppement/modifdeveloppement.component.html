@@ -1,0 +1,135 @@
+
+<div class="dev">
+
+    <form class="col-md-5 col-sm-7 col-xs-7" (ngSubmit)="AjoutDev(f1)" #f1="ngForm"  >
+        <h1> Ajout Piliers </h1>
+        <div class="form-group">
+    
+            <label for=""> titre  </label>
+        <input type="text" name="titre" class="form-control" id="" ngModel>
+        
+        </div>
+        <div class="form-group">
+    
+            <label for=""> icon  </label>
+       
+        <mat-form-field>
+          <mat-select placeholder="Select icon"  name="icon" ngModel>
+            <mat-select-trigger>
+              <mat-icon>visibility</mat-icon> CSS
+            </mat-select-trigger>
+            <mat-option value="option" *ngFor="let i of users.font"   [value]="i">
+              <i [class]="'fa '+i" matSuffix></i> 
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+    
+        </div>
+    
+    
+        <div class="form-group">
+    
+            <label for=""> text  </label>
+        <textarea name="text" class="form-control" ngModel id="">
+        </textarea>
+        </div>
+    
+    
+    <input type="submit" class="btn btn-info" value="Ajouter">
+    
+    </form>
+    
+    
+    
+    
+
+
+</div>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">titre</th>
+        <th scope="col">texr</th>
+        <th scope="col">icon</th>
+        <th scope="col">modifier</th>
+        <th>supprimer </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of dev" >
+        <th scope="row"> {{   d.titre}} </th>
+        <td> {{d.text}}  </td>
+        <td> <h3> <i [class]="'fa '+d.icon" aria-hidden="true"></i>  </h3>   </td>
+        <td> <button class="btn btn-warning" (click)="changerid(d.id)"  data-toggle="modal" data-target="#exampleModal">modifier </button>  </td> 
+        <td>  <button class="btn btn-danger" (click)="supprimer(d.id)"  > supprimer </button>  </td>
+         
+
+
+      </tr>
+    </tbody>
+  </table>
+
+
+
+<!--modifier-->
+<div class="modal" tabindex="-1" id="exampleModal" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">modifier pilliers</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form class="col-md-5 col-sm-7 col-xs-7" (ngSubmit)="modifier(f2)" #f2="ngForm"  >
+                <h1> Ajout Piliers </h1>
+                <div class="form-group">
+            
+                    <label for=""> id  </label>
+                <input type="text" name="id" class="form-control" id="" [ngModel]="mdev.id" >
+                
+                </div>
+                <div class="form-group">
+            
+                    <label for=""> titre  </label>
+                <input type="text" name="titre" class="form-control" id="" [ngModel]="mdev.titre">
+                
+                </div>
+                <div class="form-group">
+            
+                    <label for=""> icon  </label>
+                <select  name="icon" class="form-control" [ngModel]="mdev.icon"> 
+            <option *ngFor="let i of users.font" [value]="i"> <p> <i [class]="i" aria-hidden="true"></i></p>    </option>
+            
+            
+                </select>
+            
+            
+                </div>
+            
+            
+                <div class="form-group">
+            
+                    <label for=""> text  </label>
+                <textarea name="text" class="form-control" [ngModel]="mdev.text" id="">
+                </textarea>
+                </div>
+            
+            
+            <input type="submit" class="btn btn-info" value="Modifier">
+            
+            </form>
+
+            
+
+
+
+        </div>
+ 
+
+
+      </div>
+    </div>
+  </div>

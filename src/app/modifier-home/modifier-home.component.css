@@ -29,3 +29,7 @@
         height: 30vh;
         width: 100%;
     }
+
+    .container{
+        padding-left: 150px;
+    }

@@ -1,0 +1,26 @@
+.projet{
+  
+
+    
+    }
+
+
+
+
+    .ajout{
+        
+
+   width:150%;
+    }
+    
+    #lb1{
+        background-image: url('https://cdn.dribbble.com/users/34020/screenshots/3993396/otp_icon_upload.gif');
+        background-size: cover;
+        padding-top: -30px;
+        
+        height: 250px;
+        
+        }
+        #img1,#img2,#img3{
+            visibility: hidden;
+        }

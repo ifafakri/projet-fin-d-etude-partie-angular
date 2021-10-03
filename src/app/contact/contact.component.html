@@ -14,13 +14,7 @@
   
             <div class="col-lg-5">
               <div class="info">
-                <div class="address">
-                  <i class="fa fa-map-marker" aria-hidden="true" style="color:white;"></i>
-
-                  <h4>Location:</h4>
-                  <p>UTICA Rue Ferjani Bel Hadj Ammar Cité El Khadra
-                    1003 Tunis</p>
-                </div>
+             
   
                 <div class="email">
                   <i class="fa fa-envelope-open" aria-hidden="true"></i>
@@ -40,20 +34,25 @@
   
             <div class="col-lg-6 mt-5 mt-lg-0" >
   
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <form (ngSubmit)="AjoutContact(f)" #f="ngForm" role="form" class="php-email-form">
                 <div class="row">
                   <div class="col-md-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                    <input type="text" name="nom" class="form-control" id="name" placeholder="Your Name" ngModel required>
+<h3 class="text-danger" *ngIf="n">champ nom est obligatoire</h3>
+
                   </div>
                   <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" ngModel required>
+                    <h3 class="text-danger" *ngIf="e">champ email est obligatoire</h3>
                   </div>
                 </div>
                 <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                  <input type="text" class="form-control" name="sujet" id="subject" placeholder="Subject" ngModel required>
+                  <h3 class="text-danger" *ngIf="s">champ sujet est obligatoire</h3>
                 </div>
                 <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                  <textarea class="form-control" name="message" rows="5" placeholder="Message" ngModel required></textarea>
+                  <h3 class="text-danger" *ngIf="m">champ message est obligatoire</h3>
                 </div>
                 <div class="my-3">
                   <div class="loading">Loading</div>
@@ -66,18 +65,9 @@
             </div>
   
           </div>
-          <div class="smidea">
-            <h3> Social media  </h3>
-    
-            <a href="http://"><img src="./../../assets/image/facebook.png" class="socialMed" alt="">   </a>   
-         
-            <a href="http://"><img src="./../../assets/image/twitter.png" class="socialMed" alt=""> </a>
-            <a href="http://"><img src="./../../assets/image/youtube.png" class="socialMed" alt=""> </a>
-            <a href="http://"><img src="./../../assets/image/instagram.png" class="socialMed" alt=""> </a>
-            <a href="http://"><img src="./../../assets/image/linkedin.png" class="socialMed" alt=""> </a>
-         
-          </div>
+        
         </div>
+
 
        
 

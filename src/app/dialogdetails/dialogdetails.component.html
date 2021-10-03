@@ -1,15 +1,15 @@
-<div mat-dialog-content>
+<div mat-dialog-content class="b">
   <p>Details</p>
   <mat-form-field>
-    <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/user.png" alt="">
-    <span> mail</span>  {{data.mail}} <br>
-    <span> nom et prenom</span>  {{data.nom}} {{data.prenom}}   <br>
-    <span>poste:</span>   {{data.poste}} <br>
-    <span>numero telephone:</span>  {{data.numtel}} <br>
-    <span>mot de passe: </span>{{data.motpass}}
+    <img [src]="d.image" alt="">
+    <span> mail</span>  {{d.mail}} <br>
+    <span> nom et prenom</span>  {{d.nom}} {{d.prenom}}   <br>
+    <span>poste:</span>   {{d.poste}} <br>
+    <span>numero telephone:</span>  {{d.numtel}} <br>
+    <span>mot de passe: </span>{{d.motpass}}
   </mat-form-field>
 </div>
-<div mat-dialog-actions> 
+<div mat-dialog-actions >  
   <button mat-stroked-button color="warn" mat-dialog-close>fermer </button>
 </div>
 

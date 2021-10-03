@@ -1,13 +1,20 @@
+
+
+mat-dialog-actions,mat-form-field,.b{
+    background:white;
+}
+
 img{
 
-    width:150px;
+    width:90px;
     height: 90px;
-   float: center;
+ display:block;
    margin-bottom: 50px;
    border-radius: 50%;
 }
 div{
     font-size: 17px;
+    color:black;
     font-family: Arial, Helvetica, sans-serif;
 }
 

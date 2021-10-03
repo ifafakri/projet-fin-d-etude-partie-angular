@@ -1,48 +1,64 @@
-<div class="presentation-general bg-dark col-lg-4 col-sm-4 col-sm-7 col-xs-7">
-    <h2 class="text-success"> modifier la presentation general</h2>
-    <form (ngSubmit)="modifierpresentationGereral(f1)" #f1="ngForm">
-        <textarea placeholder="description" name="description" [ngModel]="t.presentation[0].description"> </textarea> <br>
-        <label for="img2" class="btn btn-danger"><i class="fa fa-file-image-o" aria-hidden="true"></i> modifier l image
-        </label> <input type="file" id="img2" (change)="uploadImage($event)" >
-        <br>
-        <button type="submit" class="btn btn-success">modifier</button>
+<div class="container">
 
-    </form>
+    <div class="row">
+        <div class="card presentation-general bg-light col-lg-4 col-sm-4 col-sm-7 col-xs-7">
+            <h2 class="text-primary"> modifier la presentation general</h2>
+            <form (ngSubmit)="modifierpresentationGereral(f1)" #f1="ngForm">
+                <textarea placeholder="description" class="form-control" name="description" [ngModel]="t.presentation[0].description"> </textarea> <br>
+                <label for="img2" class="btn btn-danger"><i class="fa fa-file-image-o" aria-hidden="true"></i> modifier l image
+                </label> <input type="file" id="img2" (change)="uploadImage($event)" >
+                <br>
+                <img [src]="imagedata1" style="height:50px; width:100px;margin:10px;display:block;" *ngIf="imagedata1!=null" alt="imagedata1">
+
+                <button type="submit" class="btn btn-primary">modifier</button>
+        
+            </form>
+        
+        
+        </div>
+        
+        
+        <div class="card mission bg-light col-lg-4 col-sm-4 col-sm-7 col-xs-7">
+            <h2 class="text-primary"> {{t.presentation[1].titre}} </h2>
+            <form (ngSubmit)="modifierMission(f2)" #f2="ngForm">
+        
+        <input type="text" name="titre" [ngModel]="t.presentation[1].titre"  class="form-control" >
+        
+                <textarea name="description" class="form-control" [ngModel]="t.presentation[1].description" id=""></textarea>
+        
+                <button type="submit" class="btn btn-primary">modifier</button>
+        
+            </form>
+        
+        </div>
+        
+        <div class="card mission bg-light col-lg-4 col-sm-4 col-sm-7 col-xs-7">
+            <h2 class="text-primary">modifier vision</h2>
+            <form (ngSubmit)="modifierVision(f3)" #f3="ngForm">
+                <input type="text" name="titre" [ngModel]="t.presentation[2].titre" class="form-control" >
+        
+                <textarea name="description" class="form-control" [ngModel]="t.presentation[2].description" id=""></textarea>
+        
+                <button type="submit" class="btn btn-primary">modifier</button>
+        
+            </form>
+        
+        </div>
+        <div class="card mission bg-light col-lg-4 col-sm-4 col-sm-7 col-xs-7">
+            <h2 class="text-primary">modifier credo</h2>
+            <form (ngSubmit)="modifierCredo(f4)" #f4="ngForm">
+                <input type="text" name="titre" [ngModel]="t.presentation[3].titre"  class="form-control" >
+        
+                <textarea name="description" class="form-control" [ngModel]="t.presentation[3].description" id=""></textarea>
+        
+                <button type="submit" class="btn btn-primary">modifier</button>
+        
+            </form>
+        
+        </div>
+        
+        <!-- les images-->
 
 
+    </div>
 </div>
-
-
-<div class="mission bg-dark col-lg-4 col-sm-4 col-sm-7 col-xs-7">
-    <h2 class="text-success">modifier mission</h2>
-    <form (ngSubmit)="modifierMission(f2)" #f2="ngForm">
-        <textarea name="description" [ngModel]="t.presentation[1].description" id=""></textarea>
-
-        <button type="submit" class="btn btn-success">modifier</button>
-
-    </form>
-
-</div>
-
-<div class="mission bg-dark col-lg-4 col-sm-4 col-sm-7 col-xs-7">
-    <h2 class="text-success">modifier vision</h2>
-    <form (ngSubmit)="modifierVision(f3)" #f3="ngForm">
-        <textarea name="description" [ngModel]="t.presentation[2].description" id=""></textarea>
-
-        <button type="submit" class="btn btn-success">modifier</button>
-
-    </form>
-
-</div>
-<div class="mission bg-dark col-lg-4 col-sm-4 col-sm-7 col-xs-7">
-    <h2 class="text-success">modifier credo</h2>
-    <form (ngSubmit)="modifierCredo(f4)" #f4="ngForm">
-        <textarea name="description" [ngModel]="t.presentation[3].description" id=""></textarea>
-
-        <button type="submit" class="btn btn-success">modifier</button>
-
-    </form>
-
-</div>
-
-<!-- les images-->

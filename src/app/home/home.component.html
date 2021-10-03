@@ -1,119 +1,135 @@
-<div class="box1">
-    <div class="video col-lg-12 col-md-12 col-sm-12 ">
-        <video src="./../../assets/video/158025307_418196966143392_4048388125837121276_n.mp4" autoplay loop></video>
+<body id="page-top" class="index" data-pinterest-extension-installed="cr1.3.4">
 
-
-
-
-    </div>
-    <div  class="titre col-md-4 col-xs-5 col-sm-5  offset-xs-4" data-aos="flip-left">
-        La Jeune Chambre Internationale de Sidi Mansour
-        <div class="b" style="margin-top: 50px;"> <a href="" class="btn btn-warning btn-lg">Start Now</a>  <a *ngIf="!logedIn" href="/login"  class="btn btn-primary btn-lg">Login</a> <a  *ngIf="logedIn" href="/dashoardAdmin" class="btn btn-primary btn-lg">go to dashboard</a> </div>
-
-    </div>
-
-
-
-
-</div>
-
-<div class="social-media">
-    <a href="" ><img src="./../../assets/image/facebook.png" alt=""> </a>
-    <a href="" ><img src="./../../assets/image/twitter.png" alt=""> </a>
-    <a href="" ><img src="./../../assets/image/youtube.png" alt=""> </a>
-    <a href="" ><img src="./../../assets/image/linkedin.png" alt=""> </a>
-    <a href="" ><img src="./../../assets/image/instagram.png" alt=""> </a>
-
-</div>
-
-<div class="container-fluid">
-    <div class="row">
-
-
-
-        <div class="box " data-aos="zoom-in-down">
-
-            <img [src]="home.home[0].image"
-                class="img-fluid rounded col-lg-5 col-md-5 col-sm-5 col-xs-5">
-            <div class="visionText col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                <h3 style="text-align: center;"> <i class="fa fa-pie-chart" aria-hidden="true"></i> Notre Vision </h3>
-                <p>
-                    {{home.home[0].description}}
-
-                </p>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Celine Is Awesome</a>
             </div>
 
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden active">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container-fluid -->
+    </nav>
 
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+            </div>
+        </div>
+    </header>
 
-        <div class="statestique">
-
-
-
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
             <div class="row">
 
-
-                <!--Annee-->
-                <div class="annee col-lg-3 col-md-3 offset-1 " data-aos="zoom-in-left">
-                    <p> <i class="fa fa-clock-o" aria-hidden="true"></i></p>
-
-                    <p class="textstatestique"> {{anne}}</p>
-                    <p class="textstatestique"> annee</p>
-
-                </div>
-                <!--Action-->
-                <div class="annee col-lg-3 col-md-3 offset-1 " data-aos="zoom-out-up">
-                    <p> <i class="fa fa-clock-o" aria-hidden="true"></i></p>
-
-                    <p class="textstatestique"> {{action}}</p>
-                    <p class="textstatestique"> Action</p>
-
-                </div>
-
-                <!--Formations -->
-
-                <div class="annee col-lg-3 col-md-3 offset-1 " data-aos="zoom-out-up">
-                    <p> <i class="fa fa-clock-o" aria-hidden="true"></i></p>
-
-                    <p class="textstatestique">{{formation}} </p>
-                    <p class="textstatestique"> Formation</p>
-
-                </div>
             </div>
+            <div class="row text-center">
+                <div class="col-md-4 ">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-eye" style="color:#0097D7;" aria-hidden="true"></i>
 
+                    </span>
+                    <h4 class="service-heading">{{h.vision.titre}}</h4>
+                    <p class="text-muted">{{h.vision.description}}</p>
+                </div>
+              
 
+                <!--credo-->
+                <div class="col-md-4 ">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-check-square" style="color:#0097D7;" aria-hidden="true"></i>
+
+                    </span>
+                    <h4 class="service-heading">Credo</h4>
+                    <p class="text-muted">
+
+                        Que la foi en Dieu donne à la vie son véritable sens; <br>
+                        Que la fraternité humaine transcende la souveraineté des nations ;<br>
+                        Que la liberté des individus et de l’entreprise assure mieux la justice économique ;    
+                        Que l’autorité doit s’appuyer sur la loi et non sur l’arbitraire ; <br>
+                        Que la personne humaine est la plus précieuse des richesses ;<br>
+                        Et que servir l’humanité constitue l’oeuvre la plus noble d’une vie.
+
+                    </p>
+                </div>
+                <!-- -->
+
+                <div class="col-md-4 ">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-check-square" style="color:#0097D7;" aria-hidden="true"></i>
+
+                    </span>
+                    <h4 class="service-heading">{{h.mission.titre}}</h4>
+                    <p class="text-muted">{{h.mission.description}}</p>
+                </div>
+
+            </div>
         </div>
-
-        <div class="credo media col-lg-10 col-md-10 col-sm-12 col-xs-12" data-aos="zoom-out-right">
-
-            <img [src]="home.home[1].image" class="rounded mr-3 " alt="">
+    </section>
 
 
-            <div class="credotext media-body ">
-                <h2> Notre Credos</h2>
-<!--
-                <h3><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Que la foi en Dieu donne à la vie son véritable
-                    sens ; </h3>
-                <h3><i class="fa fa-users" aria-hidden="true"></i> Que la fraternité humaine transcende la souveraineté
-                    des nations ;</h3>
-                <h3><i class="fa fa-shopping-bag" aria-hidden="true"></i> Que la liberté des individus et de
-                    l’entreprise assure mieux la justice économique ;
 
-                </h3>
 
-                <h3><i class="fa fa-address-card" aria-hidden="true"></i> Que l’autorité doit s’appuyer sur la loi et
-                    non sur l’arbitraire ;
-                </h3>
-                <h3> <i class="fa fa-industry" aria-hidden="true"></i> Que la personne humaine est la plus précieuse des
-                    richesses ;
-                </h3>
+    <div class="statestique">
 
-                <h3> <i class="fa fa-certificate" aria-hidden="true"></i> Et que servir l’humanité constitue l’oeuvre la
-                    plus noble d’une vie.</h3>-->
-                    {{home.home[1].description}}
+        <div class="row">
+
+            
+
+            <div class="col-md-4 col-sm-4 offset-1 wow fadeInLeft">
+                <!-- About item 01 -->
+                <div class="about-item text-center">
+                    <i class="fa fa-rocket"></i>
+                    <h3>{{f3}} </h3>
+                    <hr>
+                    <p> projet</p>
+                </div>
+
             </div>
 
-
+            <div class="col-md-4 col-sm-4 offset-1 wow fadeInLeft">
+                <!-- About item 01 -->
+                <div class="about-item text-center">
+                    <i class="fa fa-rocket"></i>
+                    <h3>{{f1}} </h3>
+                    <hr>
+                    <p>Formations</p>
+                </div>
+            </div>
 
 
 
@@ -123,17 +139,333 @@
     </div>
 
 
+    <!--   Actions   -->
+    <ul class="card-list">
+	
+        <li class="card"  *ngFor="let lf of listeform"  >
+            <a class="card-image" [href]="geturl(lf.id)" target="_blank" [ngStyle]="{'background-image': 'url('+lf.image[0]+')'}" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-500.jpg">
+                <img [src]="lf.image[0]" alt="Psychopomp" />
+            </a>
+            <a class="card-description" [href]="geturl(lf.id)" target="_blank">
+                <h2>{{lf.titre}}</h2>
+                <p> {{cutch(lf.text)}} </p>
+            </a>
+        </li>
 
 
 
-</div>
+        <!-- projet -->
+        <li class="card"  *ngFor="let lpr of lp"  >
+            <a class="card-image" [href]="geturl(lpr.id)" target="_blank" [ngStyle]="{'background-image': 'url('+lpr.image[0]+')'}" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-500.jpg">
+                <img [src]="lpr.image[0]"  />
+            </a>
+            <a class="card-description" [href]="url2+lpr.id" target="_blank">
+                <h2>{{lpr.titre}}</h2>
+                <p> {{cutch(lpr.text)}} </p>
+            </a>
+        </li>
+        
+        
+       
+        
+    </ul>
 
 
-<app-contact> </app-contact>
 
-<div class="row">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104889.14766467811!2d10.797902983372184!3d34.76098662638827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13002cda1486c695%3A0x22dfe0a62c50ce6f!2z2LXZgdin2YLYs-KAjg!5e0!3m2!1sar!2stn!4v1613998703066!5m2!1sar!2stn" width="600" height="450" style="border:0;" class="col-lg-6 col-md-6 col-sm-8 col-xs-8 offset-lg-2 offset-md-2" allowfullscreen="" loading="lazy" data-aos="zoom-out-down">
 
-    </iframe>
-</div>
-<!-- Large modal -->
+
+<div style="clear:both;"></div>
+
+    <!--   -->
+    <!-- About Section -->
+
+
+    <!-- Team Section -->
+    <section id="team" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Notre  Equipe</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row">
+
+               
+          
+                <div class="col-3" *ngFor="let mbre of mbr">
+                    <div class="team-member">
+                        <img [src]="mbre.image"
+                            class="img-responsive img-circle" style="position: relative; width:90%;height:200px;"  alt="">
+                        <h4> {{mbre.nom}} &nbsp; {{mbre.prenom}} </h4>
+                        <p class="text-muted">{{mbre.poste}} </p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Aside -->
+
+
+   <app-contact > </app-contact>
+
+   
+
+    <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive"
+                                src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502"
+                                alt="">
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                                repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
+                                nostrum, reiciendis facere nemo!</p>
+                            <p>
+                                <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of
+                                them for free, courtesy of <a
+                                    href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>,
+                                or you can purchase the 1500 icon set <a
+                                    href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.
+                            </p>
+                            <ul class="list-inline">
+                                <li>Date: July 2014</li>
+                                <li>Client: Round Icons</li>
+                                <li>Category: Graphic Design</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i
+                                    class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Heading</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered"
+                                src="https://unsplash.imgix.net/44/9s1lvXLlSbCX5l3ZaYWP_hdr-1.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=f0a1db79752dbb04ec6d2aab7d17c7b0"
+                                alt="">
+                            <p><a href="https://designmodo.com/startup/?u=787">Startup Framework</a> is a website
+                                builder for professionals. Startup Framework contains components and complex blocks
+                                (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any
+                                design. All of these components are made in the same style, and can easily be integrated
+                                into projects, allowing you to create hundreds of solutions for your future projects.
+                            </p>
+                            <p>You can preview Startup Framework <a
+                                    href="https://designmodo.com/startup/?u=787">here</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i
+                                    class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered"
+                                src="https://unsplash.imgix.net/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=6518e4df89659818f6c0392175a9c5e6"
+                                alt="">
+                            <p>Treehouse is a free PSD web template built by <a
+                                    href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and
+                                spacious design perfect for people or startup companies looking to showcase their apps
+                                or other projects.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a
+                                    href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.
+                            </p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i
+                                    class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered"
+                                src="https://unsplash.imgix.net/44/9s1lvXLlSbCX5l3ZaYWP_hdr-1.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=f0a1db79752dbb04ec6d2aab7d17c7b0"
+                                alt="">
+                            <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by
+                                <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and
+                                clean one page web template that was made exclusively for Best PSD Freebies. This
+                                template has a great portfolio, timeline, and meet your team sections that can be easily
+                                modified to fit your needs.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a
+                                    href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.
+                            </p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i
+                                    class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered"
+                                src="https://unsplash.imgix.net/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=6518e4df89659818f6c0392175a9c5e6"
+                                alt="">
+                            <p>Escape is a free PSD web template built by <a
+                                    href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page
+                                web template that was designed with agencies in mind. This template is ideal for those
+                                looking for a simple one page solution to describe your business and offer your
+                                services.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a
+                                    href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.
+                            </p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i
+                                    class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered"
+                                src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502"
+                                alt="">
+                            <p>Dreams is a free PSD web template built by <a
+                                    href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern
+                                one page web template designed for almost any purpose. It’s a beautiful template that’s
+                                designed with the Bootstrap framework in mind.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a
+                                    href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.
+                            </p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i
+                                    class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script
+        src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script
+        src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script
+        src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/classie.js"></script>
+    <script
+        src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script
+        src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/jqBootstrapValidation.js"></script>
+    <script
+        src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/contact_me.js"></script>
+
+
+    <span
+        style="height: 20px; width: 40px; min-height: 20px; min-width: 40px; position: absolute; opacity: 0.85; z-index: 8675309; display: none; cursor: pointer; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAUCAYAAAD/Rn+7AAADU0lEQVR42s2WXUhTYRjHz0VEVPRFUGmtVEaFUZFhHxBhsotCU5JwBWEf1EWEEVHQx4UfFWYkFa2biPJiXbUta33OXFtuUXMzJ4bK3Nqay7m5NeZq6h/tPQ+xU20zugjOxR/+7/O8539+5znnwMtNTExwJtMb3L/fiLv3botCSmUjeCaejTOb39AiFothfHxcFIrHY8RksZjBsckJcOIRMfFsHD/SsbExUYpnI8DR0dGUGjSb0byhEJp5Uqg5CTSzc2CQleJbMEj9/ywBcGRkJEk9DQqouEVQT1sK444yWI9UonmTjGqauVLEIlHa9x8lAMbj8SSpp0rwKGMVvg8P46vbg0C7na8z8JsMcgHe7jlEa+edRhiLy8n/TUMfu6EvLElk+U0WtGwrTrdfAGQf5J8iiK4LVzDU28t8JtMSocf8E+l68myaNFXm/6rXslLK7ay5TOunuRvZWpJuvwAYjUaTpOIWoquuAZ219RTaxKYp9BbjycoN5FvL9qH9TBX5rvoGdJythvXYSTxdtRnWylO/ZdqrLsGwszzhWQ593z2KlAwCYCQSSZJ6ehZ0W7bD9VBLgN0NCqr3qR7R2rBrL3pu3Sb/7nDlz2uy6cG0OXk0GTbZXzNp8trsPAQdTj6frlWzN2DcXZGKQQAMh8NJ6rpyHe+PnkCr/CAFdZyvpfpjuvkifLF9wIt1Wwlo0OHie1RvWrKa93RjzfzliTzPKz3ltB0/Tevmwp14wGUgHAzSOoUEwFAolFaaBSuhnslPRkJexUJtZ6v5HtUeLswl33n1BgEY5fvhs9sJ3FAiT+QYyyvoAQJuD0KBAFRTJNAuz5/s3gJgMBhMJwrVFRThM5tY5zUF/A4X1f2fvQTRLCuBreoim0YmAbqNJryvPEXeeq46kaNdkQ/1HCncbJKPs9ZSv2VHGfWsZ2hfkhKAfr8/pdxWKx4wwD69PmVfNSOL+lr2w+gYqHpWDtXt1xQ8AMlWU0e1lqLd/APRHoP8AJqWrQG9gYxcPMsvSJUvAA4MDKTUJ7MZLaVy8v+qT21tcDx/OemePr0RTkNrur4A6PP5xCgBsL+/X4wiQDpuuVxOeL1eMYmYeDY6sOp0z+B0OuHxeEQhxkJMFosJiSO/UinOI/8Pc+l7KKArAT8AAAAASUVORK5CYII=);"></span>
+</body>
+
+
+
+<app-footer></app-footer>

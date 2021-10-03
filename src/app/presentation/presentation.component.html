@@ -1,107 +1,236 @@
-<h1 id="titre">presentation</h1>
+<div class="activite">
 
-<div class="container-fluid">
-    <div class="row">
-
-        <div class="box media " data-aos="flip-left">
-            <img src="https://www.jcitunisia.com/wp-content/uploads/2020/03/jci-hq.jpg" class="mr-3" alt="">
+    <h1>
 
 
-            <div class="textpr mt-0 media-boday ">
-                La Jeune Chambre Internationale (JCI) est une fédération mondiale de 200 000 jeunes professionnels et
-                entrepreneurs, âgés de 18 à 40 ans, répartis en près de 5 000 communautés dans plus de 100 pays à
-                travers le monde.
+    </h1>
 
-                Visant à être le principal réseau mondial de jeunes citoyens actifs, la JCI se donne pour mission
-                d’offrir les opportunités de développement nécessaires aux jeunes afin de leur donner la capacité de
-                créer des «changements positifs». Chose que les membres de la JCI n’ont pas manqué de faire. Partout
-                dans le monde, ils sont actifs, dynamiques, influents et occupent, généralement, des postes importants
-                dans leurs sociétés respectives.
-                Par ailleurs, l’exécution des programmes pour le «changement positif» et l’organisation des
-                manifestations font également partie des activités de la JCI.
+
+
+
+
+</div>
+
+<div class="elm1">
+
+    <h1 class="titre">
+        {{pres.titre}}
+
+    </h1>
+    <div class="description">
+        {{pres.description}}
+
+    </div>
+
+
+
+
+</div>
+
+
+<youtube-player class="col-12  embed-responsive embed-responsive-16by9" [videoId]="pres.video"
+    suggestedQuality="highres" [startSeconds]="0">
+</youtube-player>
+
+
+<!-- team -->
+
+
+
+
+
+
+
+
+<div id="carouselExampleControls" class="carousel slide col-lg-12 col-md-12 col-sm-12 col-xs-12 " data-ride="carousel">
+    <div class="carousel-inner">
+        
+        <div *ngFor="let s1 of senaterurArr ; let i = index" class="carousel-item" [ngClass]="{'active': i==0}">
+            <div class="row">
+
+                <!-- Debit -->
+                <div class="col-lg-3 col-md-3 col-sm-8 col-xs-8 offset-lg-1 offset-md-1 offset-sm-3 offset-xs-3 "  *ngFor="let s of s1">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img [src]="s.image" alt="team member" style="width:200px;height:200px;"
+                                class="rounded-circle">
+                        </div>
+
+                    </div>
+                    <div class="team-title offset-1">
+                        <h5 class="" style="width:70%;"  >{{s.nom}} {{s.prenom}} </h5>
+
+                        <div class=""> <span style="text-align: center;"> {{s.poste}} </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  Fin  -->
+
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- couarsul past presedent-->
+
+
+
+
+<div id="carouselExampleControls2" class="carousel slide col-lg-12 col-md-12 col-sm-12 col-xs-12" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item" *ngFor="let ps of pastpresArr; let i = index" [ngClass]="{'active': i==0}">
+
+            <div class="row">
+                <!--debit past presedent-->
+                <div class="col-lg-3 col-md-3 col-sm-8 col-xs-8  offset-lg-1 offset-md-1 offset-sm-3 offset-xs-3" *ngFor="let pst of ps">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img [src]="pst.image" alt="team member" style="width:200px;height:200px;"
+                                class="rounded-circle">
+                        </div>
+
+                    </div>
+                    <div class="team-title offset-1">
+                        <h5 class="" style="width:70%;"> {{pst.nom }} {{pst.prenom}} </h5>
+
+                        <div class="" > <span  style="text-align: center;">{{pst.poste}}</span></div>
+
+
+                    </div>
+                </div>
+                <!-- fin -->
+
             </div>
 
 
-        </div>
-    </div>
-
-
-
-
-    <div class="row" data-aos="flip-left">
-        <div class="box2 col-lg-3 col-md-3 col-sm-5 col-xs-5" data-aos="flip-right">
-            <p class="icon"> <i class="fa fa-rocket" aria-hidden="true"></i> </p>
-            <h1> Notre mission</h1>
-            <hr>
-            <p>Offrir des opportunités de développement aux jeunes en leur donnant la capacité de créer des changements
-                positifs.
-
-            </p>
 
         </div>
-
-
-        <div class="box2 col-lg-3 col-md-3 col-sm-5 col-xs-5" data-aos="flip-left">
-            <p class="icon"> <i class="fa fa-cubes" aria-hidden="true"></i>            </p>
-            <h1> Notre vision            </h1>
-            <hr>
-            <p>Être le principal réseau mondial de jeunes citoyens actifs.
-
-
-            </p>
-
-        </div>
-
-
-
-        <div class="box2 col-lg-3 col-md-3 col-sm-5 col-xs-5" data-aos="flip-left">
-            <p class="icon"> <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-            </p>
-            <h1> Notre credo            </h1>
-            <hr>
-
-            <h2 style="color:#03A9F4"> Nous croyons,            </h2>
-            <p> 
-                Que la foi en Dieu donne à la vie son véritable sens ;
-
-            </p>
-            <p> 
-                Que la fraternité humaine transcende la souveraineté des nations ;
-
-            </p>
-            <p> 
-                Que la liberté des individus et de l’entreprise assure mieux la justice économique ;
-
-            </p>
-            <p> 
-                Que l’autorité doit s’appuyer sur la loi et non sur l’arbitraire ;
-
-            </p>
-            <p> 
-                Que la personne humaine est la plus précieuse des richesses ;
-
-            </p>
-
-            <p>
-                Et que servir l’humanité constitue l’oeuvre la plus noble d’une vie.
-
-            </p>
-        </div>
-
-
-
-
-
-
 
     </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+
+<!-- fin-->
+
+
+
+   <div class="contaner-fluid  offset-lg-3 offset-md-3 ">
+    <div class="row">
+
+
+        <div class="col-lg-3 col-md-3 col-sm-8 col-xs-3  offset-lg-3 offset-md-2 offset-sm-3 offset-xs-3">
+            <div class="team-member">
+                <div class="team-img">
+                    <img [src]="presedent.image"  style="width:200px;height:200px;" class="rounded-circle">
+                </div>
+    
+            </div>
+            <div class="team-title offset-1">
+               
+                    <h5 class="" style="width:70%;"> {{presedent.nom }} {{presedent.prenom}} </h5>
+              
+    
+                <div > <span>{{presedent.poste}}</span> </div>
+            </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-3 col-sm-8 col-xs-8  offset-lg-1 offset-md-1 offset-sm-3 offset-xs-3" *ngIf="pastpim!=null">
+            <div class="team-member">
+                <div class="team-img">
+                    <img [src]="pastpim.image" style="width:200px;height:200px;" class="rounded-circle">
+                </div>
+    
+            </div>
+            <div class="team-title offset-1">
+                <div>
+                    <h5 class="" style="width:70%;"> {{pastpim.nom }} {{pastpim.prenom}} </h5>
+                </div>
+    
+                <div class=""> <span>{{pastpim.poste}}</span> </div>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+            <!--  debut-->
+           
+        </div>
+   </div>
+    <!-- -->
+  <div class="row ">
+    <div class="col-lg-3 offset-lg-5 col-md-3 offset-md-5 col-sm-3  offset-sm-3 col-xs-3 offset-xs-3" *ngFor="let con of conseil">
+        <div class="team-member">
+            <div class="team-img">
+                <img [src]="con.image" style="width:200px;height:200px;" class="rounded-circle">
+            </div>
+
+        </div>
+        <div class="team-title offset-1">
+            <h5 class="" style="width:70%;" > {{con.nom }} {{con.prenom}} </h5>
+            <div > <span>{{con.poste}}</span> </div>
+        </div>
+    </div>
+  </div>
+
+
+
+<!--Membre-->
 
 <div class="row">
-<img src="https://www.jcitunisia.com/wp-content/uploads/2020/03/84611932_2645406175581605_159768037472337920_o.jpg" class="img-thumbnail col-lg-5 col-md-5" alt="" data-aos="flip-left">
+    <div class="col-lg-3 col-md-3 col-sm-8 col-xs-8  offset-lg-1 offset-md-1 offset-sm-3 offset-xs-3" *ngFor="let listm of listeMeb">
+        <div class="team-member">
+            <div class="team-img">
+                <img [src]="listm.image" style="width:200px;height:200px;" class="rounded-circle">
+            </div>
 
+        </div>
+        <div class="team-title offset-1">
+            <div>
+                <h5 class="" style="width:70%;"> {{listm.nom }} {{listm.prenom}} </h5>
+            </div>
 
-<img src="https://www.jcitunisia.com/wp-content/uploads/2020/03/credo1.jpg" class="img-thumbnail col-lg-5 col-md-5" alt="" data-aos="zoom-out-left">
-
+            <div class=""> <span>{{listm.poste}}</span> </div>
+        </div>
+    </div>
 </div>
 
-</div>
+
+<!---->
+
+<app-footer></app-footer>

@@ -1,30 +1,13 @@
-<h1 id="titre" data-aos="fade-down"
-data-aos-easing="linear"
-data-aos-duration="1500">Bureau executif</h1>
-<div class="bureaux">
+<h1 id="titre" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Bureau executif</h1>
+<div class="bureaux"   >
 
-   
 
-    <div class="membre" data-aos="fade-right">
 
-        <img src="http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png" alt="">
-    <h2>Nom&prenom</h2>
-    <h4>Poste </h4>
-    
-    </div><div class="membre" data-aos="fade-right">
+    <div class="membre" data-aos="fade-right" *ngFor="let m of b">
 
-        <img src="http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png" alt="">
-    <h2>Nom&prenom</h2>
-    <h4>Poste </h4>
-    
-    </div><div class="membre" data-aos="fade-right">
+        <img [src]="testImage(m.image)" alt="">
+        <h2> {{m.nom}} ,{{m.prenom}} </h2>
+        <h4> {{m.poste}} </h4>
 
-        <img src="http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png" alt="">
-    <h2>Nom&prenom</h2>
-    <h4>Poste </h4>
-    
     </div>
-
-
-
 </div>

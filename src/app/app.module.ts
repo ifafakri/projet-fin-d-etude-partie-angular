@@ -1,7 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import {IvyGalleryModule} from 'angular-gallery';
+import { MatRadioModule } from '@angular/material/radio';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
+import { ToastrModule } from 'ngx-toastr';
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import {AcceeServiceService} from './accee/accee-service.service';
+import{ShareIconsModule} from 'ngx-sharebuttons/icons';
+import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
+import { YouTubePlayerModule } from "@angular/youtube-player";
 import{ServiceAdminService} from './serviceAdmin/service-admin.service';
 import{PageServiceService} from './../app/pages-service/page-service.service';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +19,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSelectModule} from '@angular/material/select';
+import {MatChipsModule} from '@angular/material/chips';
 
 import {MatDialogModule} from '@angular/material/dialog';
 import{ HttpClientModule} from '@angular/common/http';
@@ -19,7 +28,6 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { AdhesionComponent } from './adhesion/adhesion.component';
 import { PresentationComponent } from './presentation/presentation.component';
-import { FormationComponent } from './formation/formation.component';
 import { ActiviteComponent } from './activite/activite.component';
 import { MediaComponent } from './media/media.component';
 import { PartenaireComponent } from './partenaire/partenaire.component';
@@ -54,7 +62,33 @@ import { ModifierHistoriqueComponent } from './modifier-historique/modifier-hist
 import { ModifierPrsntationComponent } from './modifier-prsntation/modifier-prsntation.component';
 import { ModifPartenairComponent } from './modif-partenair/modif-partenair.component';
 import { ModifMediaComponent } from './modif-media/modif-media.component';
+import { ActiviteDetailsComponent } from './activite-details/activite-details.component';
+import { ProjetComponent } from './projet/projet.component';
+import { HistoireComponent } from './histoire/histoire.component';
+import { ModifformationComponent } from './modifformation/modifformation.component';
+import { RecrutementComponent } from './recrutement/recrutement.component';
+import { ListerecrutementComponent } from './listerecrutement/listerecrutement.component';
+import { DetailRecrutementComponent } from './detail-recrutement/detail-recrutement.component';
+import { AcceeComponent } from './accee/accee.component';
+import { ModifAceeComponent } from './modif-acee/modif-acee.component';
+import { HistoriqueUserComponent } from './historique-user/historique-user.component';
+import { ListeContactComponent } from './liste-contact/liste-contact.component';
+import { ConfigComponent } from './config/config.component';
+import { ProfileMembreComponent } from './profile-membre/profile-membre.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { FooterComponent } from './footer/footer.component';
+import { FormationdetailsComponent } from './formationdetails/formationdetails.component';
+import { Modifpresentation2Component } from './modifpresentation2/modifpresentation2.component';
+import { DeveloppementComponent } from './developpement/developpement.component';
+import { ModifdeveloppementComponent } from './modifdeveloppement/modifdeveloppement.component';
+import { GestionCommantaireComponent } from './gestion-commantaire/gestion-commantaire.component';
+import { ListCommantaireComponent } from './list-commantaire/list-commantaire.component';
 
+import {MatChipInputEvent} from '@angular/material/chips';
+import { ListeInscrirFormationComponent } from './liste-inscrir-formation/liste-inscrir-formation.component';
+import { InscrirDetailsComponent } from './inscrir-details/inscrir-details.component';
+import { BureauxComponent } from './bureaux/bureaux.component';
+import { PayementComponent } from './payement/payement.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +99,6 @@ import { ModifMediaComponent } from './modif-media/modif-media.component';
     AdhesionComponent,
 
     PresentationComponent,
-    FormationComponent,
     ActiviteComponent,
     MediaComponent,
     PartenaireComponent,GestionEvenementComponent,
@@ -87,16 +120,43 @@ import { ModifMediaComponent } from './modif-media/modif-media.component';
     ModifierPrsntationComponent,
     ModifPartenairComponent,
     ModifMediaComponent,
+    ActiviteDetailsComponent,
+    ProjetComponent,
+    HistoireComponent,
+    ModifformationComponent,
+    RecrutementComponent,
+    ListerecrutementComponent,
+    DetailRecrutementComponent,
+    AcceeComponent,
+    ModifAceeComponent,
+    HistoriqueUserComponent,
+    ListeContactComponent,
+    ConfigComponent,
+    ProfileMembreComponent,
+    FooterComponent,
+    FormationdetailsComponent,
+    Modifpresentation2Component,
+    DeveloppementComponent,
+    ModifdeveloppementComponent,
+    GestionCommantaireComponent,
+    ListCommantaireComponent,
+    ListeInscrirFormationComponent,
+    InscrirDetailsComponent,
+    BureauxComponent,
+    PayementComponent,
     
    
 
   ],
-  imports: [FormsModule,MatTableModule,MatPaginatorModule,MatMenuModule,MatDialogModule,MatSelectModule,
+  imports: [FormsModule,MatTableModule,MatPaginatorModule,MatMenuModule,MatDialogModule,MatSelectModule,YouTubePlayerModule ,
     BrowserModule,MatButtonModule,MatDatepickerModule,HttpClientModule,
     AppRoutingModule,MatInputModule,MatBadgeModule,MatFormFieldModule,
     BrowserAnimationsModule,MatCardModule, LayoutModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule,ReactiveFormsModule
-  ],
-  providers: [ServiceAdminService,LoginserviceService,PageServiceService],
+   ,    ShareButtonsModule.withConfig({
+     debug:true
+   }),ShareIconsModule,IvyGalleryModule,ToastrModule.forRoot() ,MatRadioModule,MatCheckboxModule,MatChipsModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers: [ServiceAdminService,LoginserviceService,PageServiceService,AcceeServiceService],
   bootstrap: [AppComponent],
 entryComponents:[DialogdetailsComponent,EditmembredialogComponent,DeletemembredialogComponent,AjouterMembredialogComponent]
 })

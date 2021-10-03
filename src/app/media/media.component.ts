@@ -2,9 +2,12 @@ import { Component, OnInit } from '@angular/core';
 
 declare var $: any;
 import {PageServiceService} from './../pages-service/page-service.service';
-
-interface media{
+interface partenair{
   _id:number,
+  image:string
+}
+interface media{
+  id:number,
   image:string,
   video:string,
   description:string,
@@ -19,9 +22,12 @@ interface media{
 
 export class MediaComponent implements OnInit {
 m:media[]
+
+i=-1
+prt:partenair[]
   constructor(private pserv:PageServiceService) { }
 
-  ngOnInit(): void {
+ async ngOnInit() {
 this.pserv.GetMedia().toPromise().then(
 
   (data:media[])=>{
@@ -29,12 +35,22 @@ this.pserv.GetMedia().toPromise().then(
   }
 )
 
-    $(document).ready(function(){
+ await   $(document).ready(function(){
 
       $('#carouselExampleIndicators').carousel({
         interval: 2000
       })
     })
+
+    await this.pserv.getPartenair().toPromise().then(
+      (data:partenair[])=>{
+        this.prt=data
+        console.log(data)
+      }
+    )
+
+    
+
 
 
 
