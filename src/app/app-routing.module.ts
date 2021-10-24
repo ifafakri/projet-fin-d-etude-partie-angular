@@ -45,7 +45,7 @@ import { ProjetComponent } from './projet/projet.component';
 import { RecrutementComponent } from './recrutement/recrutement.component';
 
 const routes: Routes = [
-  {path:'contact',component:ContactComponent},{
+  {path:'https://jcisidimansour.tn/contact',component:ContactComponent},{
   path:'',component:HomeComponent
 },{path:'home',component:HomeComponent},{
 
@@ -55,98 +55,98 @@ const routes: Routes = [
   path:'histoire',component:HistoireComponent
 },{
 
-path:'presentation',component:PresentationComponent
+path:'https://jcisidimansour.tn/presentation',component:PresentationComponent
 }
 ,{
-  path:'formationdetails/:id',component:FormationdetailsComponent
+  path:'https://jcisidimansour.tn/formationdetails/:id',component:FormationdetailsComponent
 }
 ,{
-  path:'activite',component:ActiviteComponent
+  path:'https://jcisidimansour.tn/activite',component:ActiviteComponent
 },
 {
-  path:'listeInscrir',component:ListeInscrirFormationComponent
+  path:'https://jcisidimansour.tn/listeInscrir',component:ListeInscrirFormationComponent
 },
 {
-  path:'inscrirDetails/:id',component:InscrirDetailsComponent
+  path:'https://jcisidimansour.tn/inscrirDetails/:id',component:InscrirDetailsComponent
 }
 ,{
-  path:'media',component:MediaComponent
+  path:'https://jcisidimansour.tn/media',component:MediaComponent
 },{
 
   path:'partenaire',component:PartenaireComponent
 },{
-  path:'login',component:LoginComponent
+  path:'https://jcisidimansour.tn/login',component:LoginComponent
 },
 {
-  path:'gestionCommantaire',component:GestionCommantaireComponent
+  path:'https://jcisidimansour.tn/gestionCommantaire',component:GestionCommantaireComponent
 },
 {
-path:"listecommantaire/:id",component:ListCommantaireComponent
+path:"https://jcisidimansour.tn/listecommantaire/:id",component:ListCommantaireComponent
 
 }
 ,
 {
-  path:'developpement',component:DeveloppementComponent
+  path:'https://jcisidimansour.tn/developpement',component:DeveloppementComponent
 }
 ,{
-  path:'modifDeveloppement',component:ModifdeveloppementComponent
+  path:'https://jcisidimansour.tn/modifDeveloppement',component:ModifdeveloppementComponent
 }
 
 ,{
 
-  path:'dashoardAdmin',component:AdmindashboardComponent
+  path:'https://jcisidimansour.tn/dashoardAdmin',component:AdmindashboardComponent
 },
   {
-    path:'gestionMembre',component:GestionMembreComponent
+    path:'https://jcisidimansour.tn/gestionMembre',component:GestionMembreComponent
   
 },{
-  path:'page',component:GestionPagesComponent
+  path:'https://jcisidimansour.tn/page',component:GestionPagesComponent
 },{
-  path:'modifieHome',component:ModifierHomeComponent
+  path:'https://jcisidimansour.tn/modifieHome',component:ModifierHomeComponent
 },{
-  path:'modifierAdhesion',component:ModifierAdhesionComponent
+  path:'https://jcisidimansour.tn/modifierAdhesion',component:ModifierAdhesionComponent
 },{
-  path:'modiPresentation',component:ModifierPrsntationComponent
+  path:'https://jcisidimansour.tn/modiPresentation',component:ModifierPrsntationComponent
 },{
-  path:'modifierPartenair',component:ModifPartenairComponent
+  path:'https://jcisidimansour.tn/modifierPartenair',component:ModifPartenairComponent
 },
 {path:"bureau",component:BureauExecutifComponent}
 ,{
-  path:'modifMedia',component:ModifMediaComponent
+  path:'https://jcisidimansour.tn/modifMedia',component:ModifMediaComponent
 },{
-  path:'modifhistoire',component: ModifierHistoriqueComponent
+  path:'https://jcisidimansour.tn/modifhistoire',component: ModifierHistoriqueComponent
 },{
-  path:'gestionpage',component:GestionPagesComponent
+  path:'https://jcisidimansour.tn/gestionpage',component:GestionPagesComponent
 },
 
-{path:'projet',component:ProjetComponent},
-{path:'projetDetails/:id',component:ActiviteDetailsComponent},
-{path:'modifformation',component:ModifformationComponent},{
-  path:'recrutement',component:RecrutementComponent
+{path:'https://jcisidimansour.tn/projet',component:ProjetComponent},
+{path:'https://jcisidimansour.tn/projetDetails/:id',component:ActiviteDetailsComponent},
+{path:'https://jcisidimansour.tn/modifformation',component:ModifformationComponent},{
+  path:'https://jcisidimansour.tn/recrutement',component:RecrutementComponent
 },{
-  path:'recrutementdetail/:id',component:DetailRecrutementComponent
+  path:'https://jcisidimansour.tn/recrutementdetail/:id',component:DetailRecrutementComponent
 },
 {
-  path:'modiferPresentation',component:Modifpresentation2Component
+  path:'https://jcisidimansour.tn/modiferPresentation',component:Modifpresentation2Component
 },
 {
-path:'listeRecrutement',component:ListerecrutementComponent
+path:'https://jcisidimansour.tn/listeRecrutement',component:ListerecrutementComponent
 
 },{
-  path:'accee',component:AcceeComponent
+  path:'https://jcisidimansour.tn/accee',component:AcceeComponent
 },{
-  path:'modifAccee/:poste',component:ModifAceeComponent
+  path:'https://jcisidimansour.tn/modifAccee/:poste',component:ModifAceeComponent
 },{
-  path:'historiqueU',component:HistoriqueUserComponent
+  path:'https://jcisidimansour.tn/historiqueU',component:HistoriqueUserComponent
 },{
-  path:'listeContact',component:ListeContactComponent
+  path:'https://jcisidimansour.tn/listeContact',component:ListeContactComponent
 },{
-  path:'config',component:ConfigComponent
+  path:'https://jcisidimansour.tn/config',component:ConfigComponent
 },
-{path:'profile',component:ProfileMembreComponent},{
-  path:'bureaux',component:BureauxComponent
+{path:'https://jcisidimansour.tn/profile',component:ProfileMembreComponent},{
+  path:'https://jcisidimansour.tn/bureaux',component:BureauxComponent
 },{
-  path:'payement',component:PayementComponent
+  path:'https://jcisidimansour.tn/payement',component:PayementComponent
 }
 ]
 ;

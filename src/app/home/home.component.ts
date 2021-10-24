@@ -165,6 +165,8 @@ await this.msrv.ListeMembre().toPromise().then(
   (data:PeriodicElement[])=>{
  this.m3=data.length
  this.mbr=data
+ console.log(data)
+
   }
 )
 
@@ -173,6 +175,7 @@ await this.msrv.ListeMembre().toPromise().then(
 await this.pserv.getListeformation().toPromise().then(
   (data:projet2[])=>{
 this.f=data.length
+console.log(data)
   }
 )
 //projet /actions
